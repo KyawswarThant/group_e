@@ -1,0 +1,32 @@
+<%= form_with model: user, class: "login-form" do |f| %>
+
+    <div>
+      <%= f.text_field :name, class: "text-box", placeholder: "Enter Name" %>
+    </div>
+      
+    <div>
+      <%= f.email_field :email, class: "text-box", placeholder: "Enter Email" %>
+    </div>
+
+    <div>
+      <%= f.password_field :password, class: "text-box", placeholder: "Enter Password" %>
+    </div>
+    
+    <div>
+      <%= f.text_field :phone, class: "text-box", placeholder: "Enter Phone" %>
+    </div>
+
+    <div>
+      <%= f.date_field :birthday, class: "text-box", placeholder: "Enter Birthday" %>
+    </div>
+
+    <div>
+      <%= f.text_area :address, class: "text-box", placeholder: "Enter Address" %>
+    </div>
+
+    <div class="submit">
+      <%= f.submit "Sign Up", class: "submit-btn" %> 
+      <%= link_to "Go Back", root_path, class: "cancel-btn" %> 
+    </div>
+
+  <% end %>
