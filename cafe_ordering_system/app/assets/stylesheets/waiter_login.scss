@@ -7,7 +7,7 @@
   padding: 50px;
   max-width: 400px;
   border-radius: 20px;
-  border: solid cadetblue;
+  border: solid #8fa8a9;
 }
 h2 {
   text-align: center;
@@ -21,19 +21,34 @@ h2 {
 }
 .login-photo {
   text-align: center;
+  margin-bottom: 20px;
 }
 .logo {
   width: 100px;
 }
+.mb-20 {
+  margin-bottom: 20px;
+}
 .text-box {
   width: calc(100% - 25px);
-  margin-bottom: 20px;
   padding: 10px;
+  border: 2px solid #8fa8a9;
   border-radius: 10px;
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.text-box:hover {
+  border-color: rgb(31, 158, 31);
+}
+.links {
+  text-decoration: none;
 }
 .login-link {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+}
+.create-acc {
   margin-bottom: 20px;
 }
 .submit {
@@ -42,6 +57,12 @@ h2 {
 .submit-btn {
   width: 150px;
   text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 10px;
+  border: solid #8fa8a9;
   border-radius: 10px;
+}
+.submit-btn:hover {
+  color: #ffffff;
+  background-color: #1245ec;
 }

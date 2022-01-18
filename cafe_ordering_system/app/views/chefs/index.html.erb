@@ -1,3 +1,10 @@
-<h1>Chefs#index</h1>
-<p>Find me in app/views/chefs/index.html.erb</p>
-<%= button_to "Log Out", chef_sign_out_path, method: :post  %>
+<div class="nav">
+  <a><h1 class="ttl-logo">SCM Cafe</h1></a>
+  <ul>
+    <li><%= link_to "Order Lists", chefs_path, class: "link is-active" %></li>
+    <li>Item Lists</li>
+    <li>Profile</li>
+    <li>Graph</li>
+    <li><%= link_to "Log Out", chef_sign_out_path, class: "link", method: :post  %></li>
+  </ul>
+</div>
