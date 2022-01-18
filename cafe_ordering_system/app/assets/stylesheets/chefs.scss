@@ -22,9 +22,6 @@
 .nav ul li {
   padding: 10px;
   margin-right: 20px;
-}
-.nav ul li:hover {
-  background-color: dimgray;
   color: #000000;
 }
 .nav ul li:last-child {
@@ -42,6 +39,12 @@
 }
 .is-active {
   color: rgb(179, 255, 0);
+}
+.nav ul li:hover {
+  background-color: dimgray;
+}
+.nav ul li:hover .link {
+  color: #ffffff;
 }
 h2 {
   text-align: center;

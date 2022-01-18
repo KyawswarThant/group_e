@@ -1,5 +1,4 @@
 class ChefLoginController < ApplicationController
-  skip_before_action :authorized, only: [:index, :sign_in]
   
   def index
   end

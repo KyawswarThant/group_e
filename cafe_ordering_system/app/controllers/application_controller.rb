@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
 
-  before_action :authorized
   helper_method :current_waiter
   helper_method :current_chef
   helper_method :waiter_logged_in?
@@ -22,8 +21,18 @@ class ApplicationController < ActionController::Base
     !current_chef.nil?
   end
 
-  def authorized
-    redirect_to root_path unless waiter_logged_in? || chef_logged_in? 
+  def chef_authorized
+    unless chef_logged_in?
+      session.clear
+      redirect_to chef_login_path
+    end
+  end
+
+  def waiter_authorized
+    unless waiter_logged_in?
+      session.clear
+      redirect_to root_path
+    end
   end
 
 end

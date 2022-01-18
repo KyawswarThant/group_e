@@ -1,5 +1,7 @@
 class ChefsController < ApplicationController
-  skip_before_action :authorized, only: [:new, :create]
+
+  before_action :chef_authorized, only: [:index]
+  
   def index
   end
 

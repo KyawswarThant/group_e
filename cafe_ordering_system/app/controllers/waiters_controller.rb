@@ -1,5 +1,7 @@
 class WaitersController < ApplicationController
-  skip_before_action :authorized, only: [:new, :create]
+
+  before_action :waiter_authorized, only: [:index]
+
   def index
   end
 
