@@ -1,0 +1,110 @@
+// Place all the styles related to the waiters controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.container {
+  margin: 50px auto auto auto;
+  padding: 50px;
+  max-width: 400px;
+  border-radius: 20px;
+  border: solid #8fa8a9;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background: #d2b48c;
+}
+.nav ul {
+  display: inline-flex;
+}
+.nav ul li {
+  padding: 10px;
+  margin-right: 20px;
+}
+.nav ul li:last-child {
+  margin-right: 0;
+}
+.ttl-logo {
+  font-size: 30px;
+  font-family: fantasy;
+  font-style: italic;
+  color: dimgray;
+}
+.link {
+  text-decoration: none;
+  color: #000000;
+}
+.is-active {
+  color: rgb(179, 255, 0);
+}
+.nav ul li:hover {
+  background-color: dimgray;
+}
+.nav ul li:hover .link {
+  color: #ffffff;
+}
+h2 {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 24px;
+  color: cadetblue;
+}
+.text-danger {
+  color: red;
+}
+.login-form {
+  width: 80%;
+  margin: 50px auto auto auto;
+}
+.login-photo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.logo {
+  width: 100px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.text-box {
+  width: calc(100% - 25px);
+  padding: 10px;
+  border: 2px solid #8fa8a9;
+  border-radius: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+.text-box:hover {
+  border-color: rgb(31, 158, 31);
+}
+.login-link {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.submit {
+  display: flex;
+  justify-content: space-between;
+}
+.submit-btn:hover {
+  background-color: green;
+  color: #ffffff;
+}
+.submit-btn,
+.cancel-btn {
+  width: 100px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 10px;
+  border-radius: 10px;
+}
+.cancel-btn {
+  border: 1px solid;
+  text-decoration: none;
+}
+.cancel-btn:hover {
+  background-color: rgb(30, 12, 189);
+  color: #ffffff;
+}
