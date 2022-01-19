@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'chefs/index'
-  get 'chefs/new'
+  
   root "waiter_login#index"
   
   resources :chefs 
