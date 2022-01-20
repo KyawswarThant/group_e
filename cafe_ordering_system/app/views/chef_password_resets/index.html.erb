@@ -1,0 +1,12 @@
+<div class="ResetForm">
+  <h1>Forgot Password?</h1>
+  <%= form_with url: chef_login_path, method: :get do |form| %>
+    <div>
+      <%= form.label :email, "Enter email:"%>
+      <%= form.text_field :email, placeholder: "email@gmail.com" %>
+    </div>
+    <div class="submit">
+      <%= form.submit "Search" %>
+    </div>
+  <% end %>
+</div>
