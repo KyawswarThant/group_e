@@ -1,0 +1,42 @@
+<div class="nav">
+  <a>
+    <h1 class="ttl-logo">SCM Cafe</h1>
+  </a>
+  <ul>
+    <li><%= link_to "Order Lists", chefs_path, class: "link is-active" %></li>
+    <li>Item Lists</li>
+    <li><%= link_to "Profile", chef_profile_path, class: "link is-active" %></li>
+    <li>Graph</li>
+    <li><%= link_to "Log Out", chef_sign_out_path, class: "link", method: :post  %></li>
+  </ul>
+</div>
+<div class="container">
+  <h2  class="mb-20">Chef Profile</h2>
+  <div class="login-photo">
+    <%= image_tag ('login_icons/img_waiter_login.png'), class: "logo", alt: 'sign up logo' %>
+  </div>
+  <div  class="mb-20">
+    <strong>Name:</strong>&nbsp;&nbsp;
+    <%= @waiter.name %>
+  </div>
+  <div class="mb-20">
+    <strong>Email:</strong>&nbsp;&nbsp;
+    <%= @waiter.email %>
+  </div>
+  <div class="mb-20">
+    <strong>Phone:</strong>&nbsp;&nbsp;
+    <%= @waiter.phone %>
+  </div>
+  <div class="mb-20">
+    <strong>Address:</strong>
+    <%= @waiter.address %>
+  </div>
+  <div class="mb-20">
+    <strong>Birthday:</strong>
+    <%= @waiter.birthday %>
+  </div>
+  <div class="profile-password">
+    <%= link_to "Edit Profile", waiter_edit_profile_path %><br>
+    <%= link_to "Change Password", waiter_password_path %>
+  </div>
+</div>
