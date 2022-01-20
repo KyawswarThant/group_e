@@ -14,10 +14,10 @@ Rails.application.routes.draw do
   get "chef_forget_password", to: "chef_password_resets#index"
   post "chef_forget_password", to: "chef_password_resets#create"
   get "chef_password_reset_edit", to: "chef_password_resets#edit"
-  patch "chef_password_update", to: "chef_password_resets#update"
+  patch "chef_password_reset_edit", to: "chef_password_resets#update"
 
   get "waiter_forget_password", to: "waiter_password_reset#index"
   post "waiter_forget_password", to: "waiter_password_reset#create"
   get "waiter_password_reset_edit", to: "waiter_password_reset#edit"
-  patch "waiter_password_update", to: "waiter_password_reset#update"
+  patch "waiter_password_reset_edit", to: "waiter_password_reset#update"
 end

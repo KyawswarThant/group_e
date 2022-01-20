@@ -1,6 +1,7 @@
 class ChefPasswordResetsController < ApplicationController
   def create
-    @chef = Chef.find_by(email: params[:email])
+    @chef = ChefService.find_by_email(params[:email])
+
     if @chef.present?
       ChefPasswordMailer.with(chef: @chef).reset.deliver_now
     end
@@ -15,6 +16,7 @@ class ChefPasswordResetsController < ApplicationController
 
   def update
     @chef = Chef.find_signed!(params[:token], purpose: "password_reset")
+
     if @chef.update(password_params)
       redirect_to root_path, alert: "Your password was reset successfully.Please login Again"
     else

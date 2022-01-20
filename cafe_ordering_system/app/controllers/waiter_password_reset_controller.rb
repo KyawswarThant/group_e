@@ -1,8 +1,9 @@
 class WaiterPasswordResetController < ApplicationController
   def create
-    @waiter = Waiter.find_by(email: params[:email])
+    @waiter = WaiterService.find_by_email(params[:email])
+
     if @waiter.present?
-      waiterPasswordMailer.with(waiter: @waiter).reset.deliver_now
+      WaiterPasswordMailer.with(waiter: @waiter).reset.deliver_now
     end
     redirect_to root_path, notice: "We have sent reset password links to your mail"
   end
@@ -15,6 +16,7 @@ class WaiterPasswordResetController < ApplicationController
 
   def update
     @waiter = Waiter.find_signed!(params[:token], purpose: "password_reset")
+
     if @waiter.update(password_params)
       redirect_to root_path, alert: "Your password was reset successfully.Please login Again"
     else
