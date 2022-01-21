@@ -19,6 +19,6 @@ Rails.application.routes.draw do
 
   get "waiter_profile", to: "waiters#waiter_profile"
   get "waiter_edit_profile", to: "waiters#waiter_edit_profile"
-  get "waiter-password", to: "waiters#waiter_change_password"
-  post "waiter-password", to: "waiters#waiter_update_password"
+  get "waiter_password", to: "waiters#waiter_change_password"
+  post "waiter_password", to: "waiters#waiter_update_password"
 end

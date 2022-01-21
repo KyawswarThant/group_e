@@ -11,14 +11,17 @@ class ChefService
       @chef = ChefRepository.find_by_email(email)
     end
 
+    #get chef Id
     def getChefByID(id)
       @chef = ChefRepository.getChefByID(id)
     end
 
+    #update chef profile
     def updateChef(chef, chef_params)
       @is_chef_update = ChefRepository.updateChef(chef, chef_params)
     end
 
+    #update chef password
     def updatePassword(chef, password)
       @is_update_password = ChefRepository.updatePassword(chef, password)
     end

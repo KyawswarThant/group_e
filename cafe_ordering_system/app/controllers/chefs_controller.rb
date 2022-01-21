@@ -31,37 +31,44 @@ class ChefsController < ApplicationController
     end
   end
 
+  #show chef profile
   def chef_profile
     @chef = ChefService.getChefByID(session[:chef_id])
   end
 
+  #edit chef profile
   def edit_profile
     @chef = ChefService.getChefByID(session[:chef_id])
   end
 
   #change password
   def update_password
-    if params[:current_password].blank? && params[:password].blank? && params[:confirmation_password].blank?
-      redirect_to password_path, notice: "password fields required"
-    elsif params[:current_password].blank? && params[:password] != nil && params[:confirmation_password] != nil
-      redirect_to password_path, notice: "current password required"
-    elsif params[:current_password] != nil && params[:password].blank? && params[:confirmation_password] != nil
-      redirect_to password_path, notice: "new password required"
-    elsif params[:current_password] != nil && params[:password] != nil && params[:confirmation_password].blank?
-      redirect_to password_path, notice: "confirmation password required"
+    if params[:current_password].blank? || params[:password].blank? || params[:confirmation_password].blank?
+      if params[:current_password].blank?
+        @current = "current password is required"
+      end
+      if params[:password].blank?
+        @new = "new password is required"
+      end
+      if params[:confirmation_password].blank?
+        @confirm = "confirm password is required"
+      end
+      render :change_password
     else
       @chef = ChefService.getChefByID(session[:chef_id])
       if @chef.authenticate(params[:current_password])
         if params[:password] != params[:confirmation_password]
-          redirect_to password_path, notice: "comfirmation password didn't match"
+          @confirmation = "confirmation password didn't match"
+          render :change_password
         else
           @is_update_password = ChefService.updatePassword(@chef, params[:password])
           if @is_update_password
-            redirect_to chef_profile_path, notice: "password change successfully"
+            redirect_to chef_profile_path, alert: "password change successfully"
           end
         end
       else
-        redirect_to password_path, notice: "incorrect current password"
+        @current = "invalid current password"
+        render :change_password
       end
     end
   end
