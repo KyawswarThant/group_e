@@ -20,4 +20,14 @@ Rails.application.routes.draw do
   post "waiter_forget_password", to: "waiter_password_reset#create"
   get "waiter_password_reset_edit", to: "waiter_password_reset#edit"
   patch "waiter_password_reset_edit", to: "waiter_password_reset#update"
+  get "chef_profile", to: "chefs#chef_profile"
+  get "edit_profile", to: "chefs#edit_profile"
+
+  get "password", to: "chefs#change_password"
+  post "password", to: "chefs#update_password"
+
+  get "waiter_profile", to: "waiters#waiter_profile"
+  get "waiter_edit_profile", to: "waiters#waiter_edit_profile"
+  get "waiter_password", to: "waiters#waiter_change_password"
+  post "waiter_password", to: "waiters#waiter_update_password"
 end
