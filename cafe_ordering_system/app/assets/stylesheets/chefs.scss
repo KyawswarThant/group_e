@@ -113,9 +113,13 @@ h2 {
   color: #ffffff;
 }
 // chef profile & change password
+.outercontainer{
+  max-width: 1350px;
+  margin: 0 auto;
+}
 .profile-password {
    font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 15px;
+  font-size: 16px;
   display: flex;
   justify-content:space-around;
   margin-bottom: 20px;
@@ -136,12 +140,12 @@ h2 {
   margin-left: 60px;
   font-weight: bold;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .right {
   margin-left: -40px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 16px;
+  font-size: 18px;
   font-style: italic;
 }
