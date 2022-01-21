@@ -5,13 +5,13 @@ class WaiterPasswordResetController < ApplicationController
     if @waiter.present?
       WaiterPasswordMailer.with(waiter: @waiter).reset.deliver_now
     end
-    redirect_to root_path, notice: "We have sent reset password links to your mail"
+    redirect_to root_path, alert: "We have sent reset password links to your mail"
   end
 
   def edit
     @waiter = Waiter.find_signed!(params[:token], purpose: "password_reset")
   rescue ActiveSupport::MessageVerifier::InvalidSignature
-    redirect_to root_path, alert: "Your token have expired.Try Again"
+    redirect_to root_path, notice: "Your token have expired.Try Again"
   end
 
   def update
@@ -20,6 +20,7 @@ class WaiterPasswordResetController < ApplicationController
     if @waiter.update(password_params)
       redirect_to root_path, alert: "Your password was reset successfully.Please login Again"
     else
+      @message = "Confirmation password does not match password."
       render :edit
     end
   end
@@ -27,6 +28,6 @@ class WaiterPasswordResetController < ApplicationController
   private
 
   def password_params
-    params.require(:waiter).permit(:password)
+    params.require(:waiter).permit(:password, :password_confirmation)
   end
 end
