@@ -22,8 +22,8 @@ class WaitersController < ApplicationController
 
   #update waiter profile
   def update
-    @waiter = WaiterService.getWaiterByID(params[:id])
-    @is_waiter_update = WaiterService.updateWaiter(@waiter, waiter_params)
+    @waiter = WaiterService.get_waiter_by_id(params[:id])
+    @is_waiter_update = WaiterService.update_waiter(@waiter, waiter_params)
     if @is_waiter_update
       redirect_to waiter_profile_path
     else
@@ -33,12 +33,12 @@ class WaitersController < ApplicationController
 
   #show waiter profile
   def waiter_profile
-    @waiter = WaiterService.getWaiterByID(session[:waiter_id])
+    @waiter = WaiterService.get_waiter_by_id(session[:waiter_id])
   end
 
   #edit waiter profile
   def waiter_edit_profile
-    @waiter = WaiterService.getWaiterByID(session[:waiter_id])
+    @waiter = WaiterService.get_waiter_by_id(session[:waiter_id])
   end
 
   #change waiter password
@@ -55,13 +55,13 @@ class WaitersController < ApplicationController
       end
       render :waiter_change_password
     else
-      @waiter = WaiterService.getWaiterByID(session[:waiter_id])
+      @waiter = WaiterService.get_waiter_by_id(session[:waiter_id])
       if @waiter.authenticate(params[:current_password])
         if params[:password] != params[:confirmation_password]
           @confirmation = "confirmation password didn't match"
           render :waiter_change_password
         else
-          @is_update_password = WaiterService.updatePassword(@waiter, params[:password])
+          @is_update_password = WaiterService.update_password(@waiter, params[:password])
           if @is_update_password
             redirect_to waiter_profile_path, alert: "password change successfully"
           end

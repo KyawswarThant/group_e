@@ -12,17 +12,17 @@ class WaiterRepository
     end
 
     #get waiter Id
-    def getWaiterByID(id)
+    def get_waiter_by_id(id)
       @waiter = Waiter.find(id)
     end
 
     #update waiter profile
-    def updateWaiter(waiter, waiter_params)
+    def update_waiter(waiter, waiter_params)
       @is_update_waiter = waiter.update(waiter_params)
     end
 
     #update waiter password
-    def updatePassword(waiter, password)
+    def update_password(waiter, password)
       @is_update_password = waiter.update_attribute(:password, password)
     end
   end

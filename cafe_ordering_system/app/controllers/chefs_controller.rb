@@ -22,8 +22,8 @@ class ChefsController < ApplicationController
 
   #update chef profile
   def update
-    @chef = ChefService.getChefByID(params[:id])
-    @is_chef_update = ChefService.updateChef(@chef, chef_params)
+    @chef = ChefService.get_chef_by_id(params[:id])
+    @is_chef_update = ChefService.update_chef(@chef, chef_params)
     if @is_chef_update
       redirect_to chef_profile_path
     else
@@ -33,12 +33,12 @@ class ChefsController < ApplicationController
 
   #show chef profile
   def chef_profile
-    @chef = ChefService.getChefByID(session[:chef_id])
+    @chef = ChefService.get_chef_by_id(session[:chef_id])
   end
 
   #edit chef profile
   def edit_profile
-    @chef = ChefService.getChefByID(session[:chef_id])
+    @chef = ChefService.get_chef_by_id(session[:chef_id])
   end
 
   #change password
@@ -55,13 +55,13 @@ class ChefsController < ApplicationController
       end
       render :change_password
     else
-      @chef = ChefService.getChefByID(session[:chef_id])
+      @chef = ChefService.get_chef_by_id(session[:chef_id])
       if @chef.authenticate(params[:current_password])
         if params[:password] != params[:confirmation_password]
           @confirmation = "confirmation password didn't match"
           render :change_password
         else
-          @is_update_password = ChefService.updatePassword(@chef, params[:password])
+          @is_update_password = ChefService.update_password(@chef, params[:password])
           if @is_update_password
             redirect_to chef_profile_path, alert: "password change successfully"
           end

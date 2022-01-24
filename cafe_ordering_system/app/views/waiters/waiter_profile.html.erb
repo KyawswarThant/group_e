@@ -1,4 +1,5 @@
 <div class="outercontainer">
+
   <div class="nav">
     <a>
       <h1 class="ttl-logo">SCM Cafe</h1>
@@ -11,11 +12,13 @@
       <li><%= link_to "Log Out", waiter_sign_out_path, class: "link", method: :post %></li>
     </ul>
   </div>
+
   <div class="container">
     <h2  class="mb-20">Waiter Profile</h2>
     <div class="login-photo">
       <%= image_tag ("login_icons/img_waiter_login.png"), class: "logo", alt: "sign up logo" %>
     </div>
+
     <ul class="column">
       <div class="left">
         <li class="mb-20">Name:</li>
@@ -24,6 +27,7 @@
         <li class="mb-20">Address:</li>
         <li class="mb-20">Birthday:</li>
       </div>
+
       <div class="right">
         <li class="mb-20"><%= @waiter.name %></li>
         <li class="mb-20"><%= @waiter.email %></li>
@@ -31,10 +35,13 @@
         <li class="mb-20"><%= @waiter.address %></li>
         <li class="mb-20"><%= @waiter.birthday %></li>
       </div>
+
     </ul>
+    
     <div class="profile-password">
       <%= link_to "Edit Profile", waiter_edit_profile_path %>
       <%= link_to "Change Password", waiter_password_path %>
     </div>
+
   </div>
 </div>
