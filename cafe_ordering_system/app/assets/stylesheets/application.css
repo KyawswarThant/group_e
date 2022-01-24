@@ -15,11 +15,19 @@
 */
 @import "reset";
 .notice {
+  width: 100%;
+  position: absolute;
+  top: 0;
   text-align: center;
   color: red;
 }
 .alert {
+  width: 100%;
+  position: absolute;
+  top: 0;
   text-align: center;
   color: green;
-
+}
+.error {
+  color: red;
 }

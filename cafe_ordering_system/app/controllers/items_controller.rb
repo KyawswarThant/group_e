@@ -19,7 +19,6 @@ class ItemsController < ApplicationController
       flash[:errors] = @item.errors.full_messages
       render :new
     end
-    
   end
 
   def show
@@ -45,6 +44,6 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:image, :category, :name, :price )
+    params.require(:item).permit(:image, :category, :name, :price)
   end
 end

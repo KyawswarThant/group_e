@@ -1,69 +1,82 @@
 <div class="main-container">
-
   <div class="nav">
-    <a><h1 class="ttl-logo">SCM Cafe</h1></a>
+    <a>
+      <h1 class="ttl-logo">SCM Cafe</h1>
+    </a>
     <ul>
-      <li><%= link_to "Order Lists", chefs_path, class: "link" %></li>
-      <li><%= link_to "Item Lists", items_path, class: "link is-active" %></li>
-      <li><%= link_to "Profile", chef_profile_path, class: "link" %></li>
+      <li>
+        <%= link_to "Order Lists", chefs_path, class: "link" %>
+      </li>
+      <li>
+        <%= link_to "Item Lists", items_path, class: "link is-active" %>
+      </li>
+      <li>
+        <%= link_to "Profile", chef_path(id: session[:chef_id]), class: "link" %>
+      </li>
       <li>Graph</li>
-      <li><%= link_to "Log Out", chef_sign_out_path, class: "link", method: :post  %></li>
+      <li>
+        <%= link_to "Log Out", chef_sign_out_path, class: "link", method: :post %>
+      </li>
     </ul>
   </div>
-
-  <div class="create-item"> 
+  <div class="create-item">
     Create a new Item?<%= link_to "Create new Item", new_item_path %>
-  </div> 
-
+  </div>
   <div>
     <h2 class="hdr"> Coffee </h2>
     <div class="clearfix">
       <% @items.each do |item| %>
         <div class="items-div">
           <% if item.category.downcase == "coffee" %>
-            <p><%= image_tag item.image.url(:medium) %></p> 
+            <p><%= image_tag item.image.url(:medium) %></p>
             <p class="item-detail"><%= item.name %></p>
             <p class="item-detail">$<%= item.price %></p>
-            <p class="link-btn"><%= link_to "Update ", edit_item_path(item[:id]) %></p>
-            <p class="link-btn"><%= link_to "Delete", item_path(item[:id]), method: :delete, data: { confirm: "Are you sure you want to delete this item?" } %></p>
+            <p class="link-btn"><%= link_to "Update ", edit_item_path(item[:id]) %>
+            </p>
+            <p class="link-btn">
+              <%= link_to "Delete", item_path(item[:id]), method: :delete, data: { confirm: "Are you sure you want to delete this item?" } %>
+            </p>
           <% end %>
         </div>
       <% end %>
     </div>
   </div>
-
   <div>
     <h2 class="hdr"> Ice Cream </h2>
     <div class="clearfix">
       <% @items.each do |item| %>
         <div class="items-div">
           <% if item.category.downcase == "ice cream" %>
-            <p><%= image_tag item.image.url(:medium) %></p> 
+            <p><%= image_tag item.image.url(:medium) %></p>
             <p class="item-detail"><%= item.name %></p>
             <p class="item-detail">$<%= item.price %></p>
-            <p class="link-btn"><%= link_to "Update", edit_item_path(item[:id]) %></p>
-            <p class="link-btn"><%= link_to "Delete", item_path(item[:id]), method: :delete, data: { confirm: "Are you sure you want to delete this item?" } %></p>
+            <p class="link-btn"><%= link_to "Update", edit_item_path(item[:id]) %>
+            </p>
+            <p class="link-btn">
+              <%= link_to "Delete", item_path(item[:id]), method: :delete, data: { confirm: "Are you sure you want to delete this item?" } %>
+            </p>
           <% end %>
         </div>
       <% end %>
     </div>
   </div>
-
   <div>
     <h2 class="hdr"> Cake </h2>
     <div class="clearfix">
       <% @items.each do |item| %>
         <div class="items-div">
           <% if item.category.downcase == "cake" %>
-            <p><%= image_tag item.image.url(:medium) %></p> 
+            <p><%= image_tag item.image.url(:medium) %></p>
             <p class="item-detail"><%= item.name %></p>
             <p class="item-detail">$<%= item.price %></p>
-            <p class="link-btn"><%= link_to "Update", edit_item_path(item[:id]) %></p>
-            <p class="link-btn"><%= link_to "Delete", item_path(item[:id]), method: :delete, data: { confirm: "Are you sure you want to delete this item?" } %></p>
+            <p class="link-btn"><%= link_to "Update", edit_item_path(item[:id]) %>
+            </p>
+            <p class="link-btn">
+              <%= link_to "Delete", item_path(item[:id]), method: :delete, data: { confirm: "Are you sure you want to delete this item?" } %>
+            </p>
           <% end %>
         </div>
       <% end %>
     </div>
   </div>
-  
 </div>
