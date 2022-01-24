@@ -12,17 +12,17 @@ class ChefRepository
     end
 
     #get chef Id
-    def getChefByID(id)
+    def get_chef_by_id(id)
       @chef = Chef.find(id)
     end
 
     #update chef profile
-    def updateChef(chef, chef_params)
+    def update_chef(chef, chef_params)
       @is_update_chef = chef.update(chef_params)
     end
 
     #update chef password
-    def updatePassword(chef, password)
+    def update_password(chef, password)
       @is_update_password = chef.update_attribute(:password, password)
     end
   end
