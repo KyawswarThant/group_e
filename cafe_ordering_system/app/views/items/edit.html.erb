@@ -4,7 +4,9 @@
       <p style="color: red"><% error %></p> 
     <% end %>
   <% end %>
+
   <h2>Update Item Info</h2>
+
   <div class="create-form">
     <%= form_for @item do |f| %>
       <div class="mb-20">
@@ -21,4 +23,5 @@
       <div><%= link_to "Go Back", items_path, class: "back-button" %></div>
     <% end %>
   </div>
+  
 </div>
