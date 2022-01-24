@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :chefs
   resources :waiters
+  resources :items
 
   get "chef_login", to: "chef_login#index"
   post "chef_sign_in", to: "chef_login#sign_in"
