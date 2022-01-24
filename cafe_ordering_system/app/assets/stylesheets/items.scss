@@ -1,6 +1,6 @@
 .main-container {
   margin: 0 auto;
-  max-width: 1300px;
+  max-width: 1400px;
 }
 
 .clearfix:before,
@@ -93,8 +93,16 @@ h2 {
   margin-bottom: 20px;
 }
 
-button {
-  padding: 5px 10px;
+.edit-btn {
+  margin-top: 50px;
+  padding: 8px 20px;
+  border: 2px solid #8fa8a9;
+  border-radius: 5px;
+}
+
+.btn-submit {
+  margin-top: 50px;
+  padding: 8px 20px;
   border: 2px solid #8fa8a9;
   border-radius: 5px;
 }
@@ -146,13 +154,13 @@ h3 {
 
 .items-div {
   float: left;
-  width: 33%;
+  width: 20%;
   text-align: center;
 }
 
 .items-div img {
-  width: 300px;
-  height: 350px;
+  width: 150px;
+  height: 200px;
   border: 3px solid #916cd6;
   border-radius: 7px;
 }
@@ -160,6 +168,7 @@ h3 {
 .create-item {
   display: block;
   margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 20px;
   text-align: center;
   font-style: italic;
@@ -191,9 +200,9 @@ h3 {
 
 .link-btn {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 10px;
   margin-bottom: 20px;
-  margin-left: 20px;
+  margin-left: 10px;
   border: 2px solid #000000;
   border-radius: 5px;
 }
@@ -209,4 +218,27 @@ h3 {
 .link-btn a:hover {
   background-color: #0b4fa8;
   color: #ffffff;
+}
+
+.upload-button {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #9c27b0;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+input[type="file"] {
+  position: absolute;
+  top: 6px;
+  left: 38px;
+  z-index: -1;
+  color: rgb(153, 153, 153);
+  font-size: 15px;
+}
+
+.button-wrap {
+  position: absolute;
 }

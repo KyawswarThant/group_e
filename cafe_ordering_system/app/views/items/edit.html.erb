@@ -18,8 +18,13 @@
       <div class="mb-20">
         <%= f.text_field :price, class: 'price', placeholder: "Item Price" %>
       </div>
-      <div class="mb-20"><%= f.file_field :image %></div>
-      <div class="mb-20"><%= f.button :submit %></div> 
+      <div class="mb-20">
+        <div class="button-wrap">
+          <label class ="upload-button" for="item_image">Upload an Image</label>
+          <%= f.file_field :image, placeholder: "Image" %>
+        </div>
+      </div>
+      <div class="mb-20"><%= f.button :submit, class: "edit-btn" %></div> 
       <div><%= link_to "Go Back", items_path, class: "back-button" %></div>
     <% end %>
   </div>
