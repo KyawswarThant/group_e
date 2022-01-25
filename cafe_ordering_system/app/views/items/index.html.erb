@@ -1,24 +1,4 @@
 <div class="main-container">
-  <div class="nav">
-    <a>
-      <h1 class="ttl-logo">SCM Cafe</h1>
-    </a>
-    <ul>
-      <li>
-        <%= link_to "Order Lists", chefs_path, class: "link" %>
-      </li>
-      <li>
-        <%= link_to "Item Lists", items_path, class: "link is-active" %>
-      </li>
-      <li>
-        <%= link_to "Profile", chef_path(id: session[:chef_id]), class: "link" %>
-      </li>
-      <li>Graph</li>
-      <li>
-        <%= link_to "Log Out", chef_sign_out_path, class: "link", method: :post %>
-      </li>
-    </ul>
-  </div>
   <div class="create-item">
     Create a new Item?<%= link_to "Create new Item", new_item_path %>
   </div>
