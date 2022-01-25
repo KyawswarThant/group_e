@@ -42,29 +42,29 @@ class ChefsController < ApplicationController
   def update_password
     if params[:current_password].blank? || params[:password].blank? || params[:confirmation_password].blank?
       if params[:current_password].blank?
-        @current = $CURRENT_PASSWORD_REQUIRED
+        @current = Messages::CURRENT_PASSWORD_REQUIRED
       end
       if params[:password].blank?
-        @new = $NEW_PASSWORD_REQUIRED
+        @new = Messages::NEW_PASSWORD_REQUIRED
       end
       if params[:confirmation_password].blank?
-        @confirm = $CONFIRM_PASSWORD_REQUIRED
+        @confirm = Messages::CONFIRM_PASSWORD_REQUIRED
       end
       render :change_password
     else
       @chef = ChefService.get_chef_by_id(session[:chef_id])
       if @chef.authenticate(params[:current_password])
         if params[:password] != params[:confirmation_password]
-          @confirm = $CONFIRM_PASSWORD_VALIDATION
+          @confirm = Messages::CONFIRM_PASSWORD_VALIDATION
           render :change_password
         else
           @is_update_password = ChefService.update_password(@chef, params[:password])
           if @is_update_password
-            redirect_to chef_path(id: session[:chef_id]), alert: $PASSWORD_CHANGE_SUCCESS
+            redirect_to chef_path(id: session[:chef_id]), alert: Messages::PASSWORD_CHANGE_SUCCESS
           end
         end
       else
-        @current = $CURRENT_PASSWORD_VALIDATION
+        @current = Messages::CURRENT_PASSWORD_VALIDATION
         render :change_password
       end
     end

@@ -7,7 +7,7 @@ class ChefLoginController < ApplicationController
       session[:chef_id] = @chef.id
       redirect_to chefs_path
     else
-      redirect_to chef_login_path, notice: $LOGIN_ERR
+      redirect_to chef_login_path, notice: Messages::LOGIN_ERR
     end
   end
 

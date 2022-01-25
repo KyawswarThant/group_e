@@ -42,29 +42,29 @@ class WaitersController < ApplicationController
   def waiter_update_password
     if params[:current_password].blank? || params[:password].blank? || params[:confirmation_password].blank?
       if params[:current_password].blank?
-        @current = $CURRENT_PASSWORD_REQUIRED
+        @current = Messages::CURRENT_PASSWORD_REQUIRED
       end
       if params[:password].blank?
-        @new = $NEW_PASSWORD_REQUIRED
+        @new = Messages::NEW_PASSWORD_REQUIRED
       end
       if params[:confirmation_password].blank?
-        @confirm = $CONFIRM_PASSWORD_REQUIRED
+        @confirm = Messages::CONFIRM_PASSWORD_REQUIRED
       end
       render :waiter_change_password
     else
       @waiter = WaiterService.get_waiter_by_id(session[:waiter_id])
       if @waiter.authenticate(params[:current_password])
         if params[:password] != params[:confirmation_password]
-          @confirm = $CONFIRM_PASSWORD_VALIDATION
+          @confirm = Messages::CONFIRM_PASSWORD_VALIDATION
           render :waiter_change_password
         else
           @is_update_password = WaiterService.update_password(@waiter, params[:password])
           if @is_update_password
-            redirect_to waiter_profile_path, alert: $PASSWORD_CHANGE_SUCCESS
+            redirect_to @waiter, alert: Messages::PASSWORD_CHANGE_SUCCESS
           end
         end
       else
-        @current = $CURRENT_PASSWORD_VALIDATION
+        @current = Messages::CURRENT_PASSWORD_VALIDATION
         render :waiter_change_password
       end
     end
