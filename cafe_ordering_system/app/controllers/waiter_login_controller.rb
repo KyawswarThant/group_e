@@ -8,7 +8,7 @@ class WaiterLoginController < ApplicationController
       puts "loggined in #{waiters_path}"
       redirect_to waiters_path
     else
-      redirect_to root_path, notice: $LOGIN_ERR
+      redirect_to root_path, notice: Messages::LOGIN_ERR
     end
   end
 

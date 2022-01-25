@@ -4,19 +4,22 @@
     <% if session[:waiter_id] || session[:chef_id] %>
       <% if session[:chef_id] %>
         <li>
-          <%= link_to "Order Lists", chefs_path, class: "link is-active" %>
+          <%= link_to "Order Lists", chefs_path,
+                      class: "link #{"is-active" if current_page?(controller: "chefs", action: "index")}" %>
         </li>
       <% end %>
       <li>
-        <%= link_to "Item List", items_path, class: session[:waiter_id] ? "link is-active" : "link" %>
+        <%= link_to "Item List", session[:waiter_id] ? waiters_path : items_path,
+                    class: "link #{"is-active" if current_page?(controller: "items", action: "index") || current_page?(controller: "waiters", action: "index")}" %>
       </li>
       <li>
-        <%= link_to "Profile", session[:waiter_id] ? waiter_path(id: session[:waiter_id]) : chef_path(id: session[:chef_id]),
-                    class: "link" %>
+        <%= link_to "Profile",
+                    session[:waiter_id] ? waiter_path(id: session[:waiter_id]) : chef_path(id: session[:chef_id]),
+                    class: "link #{"is-active" if current_page?("http://localhost:3000/chefs/#{session[:chef_id]}") || current_page?("http://localhost:3000/waiters/#{session[:waiter_id]}")}" %>
       </li>
       <li>Graph</li>
       <li>
-        <%= link_to "Log Out", chef_sign_out_path, class: "link", method: :post %>
+        <%= link_to "Log Out", session[:waiter_id] ? waiter_sign_out_path : chef_sign_out_path, class: "link", method: :post %>
       </li>
     <% end %>
   </ul>
