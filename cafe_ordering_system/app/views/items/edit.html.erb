@@ -4,19 +4,17 @@
       <p style="color: red"><% error %></p> 
     <% end %>
   <% end %>
-
   <h2>Update Item Info</h2>
-
   <div class="create-form">
     <%= form_for @item do |f| %>
       <div class="mb-20">
-        <%= f.text_field :category, class: 'cat', placeholder: "Item Category" %>
+        <%= f.text_field :category, class: "cat", placeholder: "Item Category" %>
       </div>
       <div class="mb-20">
-        <%= f.text_field :name, class: 'name', placeholder: "Item Name" %>
+        <%= f.text_field :name, class: "name", placeholder: "Item Name" %>
       </div>
       <div class="mb-20">
-        <%= f.text_field :price, class: 'price', placeholder: "Item Price" %>
+        <%= f.text_field :price, class: "price", placeholder: "Item Price" %>
       </div>
       <div class="mb-20">
         <div class="button-wrap">
@@ -28,5 +26,4 @@
       <div><%= link_to "Go Back", items_path, class: "back-button" %></div>
     <% end %>
   </div>
-  
 </div>

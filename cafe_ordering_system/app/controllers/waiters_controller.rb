@@ -1,9 +1,6 @@
 class WaitersController < ApplicationController
   before_action :waiter_authorized, only: [:index, :profile, :edit_profile]
 
-  def index
-  end
-
   def new
     @waiter = Waiter.new
   end
@@ -25,49 +22,49 @@ class WaitersController < ApplicationController
     @waiter = WaiterService.get_waiter_by_id(params[:id])
     @is_waiter_update = WaiterService.update_waiter(@waiter, waiter_params)
     if @is_waiter_update
-      redirect_to waiter_profile_path
+      redirect_to waiter_path(id: session[:waiter_id])
     else
       render :waiter_edit_profile
     end
   end
 
   #show waiter profile
-  def waiter_profile
-    @waiter = WaiterService.get_waiter_by_id(session[:waiter_id])
+  def show
+    @waiter = WaiterService.get_waiter_by_id(params[:id])
   end
 
   #edit waiter profile
-  def waiter_edit_profile
-    @waiter = WaiterService.get_waiter_by_id(session[:waiter_id])
+  def edit
+    @waiter = WaiterService.get_waiter_by_id(params[:id])
   end
 
   #change waiter password
   def waiter_update_password
     if params[:current_password].blank? || params[:password].blank? || params[:confirmation_password].blank?
       if params[:current_password].blank?
-        @current = "current password is required"
+        @current = $CURRENT_PASSWORD_REQUIRED
       end
       if params[:password].blank?
-        @new = "new password is required"
+        @new = $NEW_PASSWORD_REQUIRED
       end
       if params[:confirmation_password].blank?
-        @confirm = "confirm password is required"
+        @confirm = $CONFIRM_PASSWORD_REQUIRED
       end
       render :waiter_change_password
     else
       @waiter = WaiterService.get_waiter_by_id(session[:waiter_id])
       if @waiter.authenticate(params[:current_password])
         if params[:password] != params[:confirmation_password]
-          @confirmation = "confirmation password didn't match"
+          @confirm = $CONFIRM_PASSWORD_VALIDATION
           render :waiter_change_password
         else
           @is_update_password = WaiterService.update_password(@waiter, params[:password])
           if @is_update_password
-            redirect_to waiter_profile_path, alert: "password change successfully"
+            redirect_to waiter_profile_path, alert: $PASSWORD_CHANGE_SUCCESS
           end
         end
       else
-        @current = "invalid current password"
+        @current = $CURRENT_PASSWORD_VALIDATION
         render :waiter_change_password
       end
     end
