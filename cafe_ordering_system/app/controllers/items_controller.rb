@@ -1,6 +1,9 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.all
+    @coffee = ItemService.get_item_by_category("Coffee")
+    @icecream = ItemService.get_item_by_category("Ice Cream")
+    @tea = ItemService.get_item_by_category("Tea")
+    @cake = ItemService.get_item_by_category("Cake")
   end
 
   def new

@@ -1,6 +1,18 @@
 class WaitersController < ApplicationController
   before_action :waiter_authorized, only: [:index, :profile, :edit_profile]
 
+  def index
+    @coffee = Item.where(category: "coffee")
+    @icecream = Item.where(category: "icecream")
+    @tea = Item.where(category: "tea")
+    @cake = Item.where(category: "cake")
+    @orders = Array.new
+    if session[:orders]
+      @orders = session[:orders]
+      @total_price = session[:total_price]
+    end
+  end
+
   def new
     @waiter = Waiter.new
   end

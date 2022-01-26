@@ -1,0 +1,138 @@
+<div class="item-container mt-5">
+  <div class="clearfix">
+    <div class="section">
+      <div>
+        <% if @coffee.length > 0 %>
+          <h3 class="hdr"><%= @coffee[0].category.capitalize %></h3>
+          <% @coffee.each do |item| %>
+            <div class="card">
+              <div class="card-body">
+                <img src="<%= item.image %>" alt="<%= item.name %>" width="100%" height="225">
+                <ul class="item-detail">
+                  <li class="<%= item.id %>" value="<%= item.name %>"><%= item.name %></li>
+                  <li class="<%= item.id %>" value="<%= item.price %>">$<%= item.price %></li>
+                  <li>
+                    Quantity
+                    <i class="far fa-minus-square"
+                      onClick="{down(<%= item.id %>)}"></i>
+                    <span id="<%= item.id %>" value="1">1</span>
+                    <i class="far fa-plus-square" onClick="{up(<%= item.id %>)}"></i>
+                  </li>
+                </ul>
+                <a href="" class="btn select" data-remote = true data-method = "POST" onClick="get_url(<%= item.id %>)">Select</a>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <div>
+        <% if @icecream.length > 0 %>
+          <h3 class="hdr"><%= @icecream[0].category.capitalize %></h3>
+          <% @icecream.each do |item| %>
+            <div class="card">
+              <div class="card-body">
+                <img src="<%= item.image %>" alt="<%= item.name %>" width="100%" height="220">
+                <ul class="item-detail">
+                  <li class="<%= item.id %>" value="<%= item.name %>"><%= item.name %></li>
+                  <li class="<%= item.id %>" value="<%= item.price %>">$<%= item.price %></li>
+                  <li>
+                    Quantity
+                    <i class="far fa-minus-square"
+                      onClick="{down(<%= item.id %>)}"></i>
+                    <span id="<%= item.id %>" value="1">1</span>
+                    <i class="far fa-plus-square" onClick="{up(<%= item.id %>)}"></i>
+                  </li>
+                </ul>
+                <a href="" class="btn select" data-remote = true data-method = "POST" onClick="get_url(<%= item.id %>)">Select</a>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <div>
+        <% if @tea.length > 0 %>
+          <h3 class="hdr"><%= @tea[0].category.capitalize %></h3>
+          <% @tea.each do |item| %>
+            <div class="card">
+              <div class="card-body">
+                <img src="<%= item.image %>" alt="<%= item.name %>" width="100%" height="220">
+                <ul class="item-detail">
+                  <li class="<%= item.id %>" value="<%= item.name %>"><%= item.name %></li>
+                  <li class="<%= item.id %>" value="<%= item.price %>">$<%= item.price %></li>
+                  <li>
+                    Quantity
+                    <i class="far fa-minus-square"
+                      onClick="{down(<%= item.id %>)}"></i>
+                    <span id="<%= item.id %>" value="1">1</span>
+                    <i class="far fa-plus-square" onClick="{up(<%= item.id %>)}"></i>
+                  </li>
+                </ul>
+                <a href="" class="btn select" data-remote = true data-method = "POST" onClick="get_url(<%= item.id %>)">Select</a>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <div>
+        <% if @cake.length > 0 %>
+          <h3 class="hdr"><%= @tea[0].category.capitalize %></h3>
+          <% @tea.each do |item| %>
+            <div class="card">
+              <div class="card-body">
+                <img src="<%= item.image %>" alt="<%= item.name %>" width="100%" height="220">
+                <ul class="item-detail">
+                  <li class="<%= item.id %>" value="<%= item.name %>"><%= item.name %></li>
+                  <li class="<%= item.id %>" value="<%= item.price %>">$<%= item.price %></li>
+                  <li>
+                    Quantity
+                    <i class="far fa-minus-square"
+                      onClick="{down(<%= item.id %>)}"></i>
+                    <span id="<%= item.id %>" value="1">1</span>
+                    <i class="far fa-plus-square" onClick="{up(<%= item.id %>)}"></i>
+                  </li>
+                </ul>
+                <a href="" class="btn select" data-remote = true data-method = "POST" onClick="get_url(<%= item.id %>)">Select</a>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="aside">
+      <div class="order-list">
+        <h3 class="order-title">Orders</h3>
+        <table class="table">
+          <thead class="thead">
+            <tr>
+              <th width="150">Name</th>
+              <th width="100">Quantity</th>
+              <th width="100">Price($)</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <% unless @orders.length < 1 %>
+              <% @orders.each do |order| %>
+                <tr>
+                  <% order.each do |key, value| %>
+                    <td><%= value %></td>
+                  <% end %>
+                  <td>
+                    <a href="<%= cancel_path(name: order.values.first) %>" data-remote = true, data-method = "post" class="cancel">
+                      <i class="fas fa-minus text-secondary"></i>
+                    </a>
+                  </td>
+                </tr>
+              <% end %>
+              <tr class="tfoot">
+                <td>
+                  <%= link_to "Confirm Order", confirm_path(waiter_id: session[:waiter_id], total_price: session[:total_price], orders: @orders), method: "post", class: "btn" %>
+                </td>
+                <td colspan="2">Total Price - $<%= @total_price %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
