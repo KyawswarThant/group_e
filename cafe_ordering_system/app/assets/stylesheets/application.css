@@ -31,3 +31,14 @@
 .error {
   color: red;
 }
+/*item category header*/
+.hdr {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  background-color: #d7dfdf;
+  color: #000000;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
+}

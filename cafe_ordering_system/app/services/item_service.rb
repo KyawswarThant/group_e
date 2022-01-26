@@ -8,6 +8,10 @@ class ItemService
       @item = ItemRepository.get_item_by_id(id)
     end
 
+    def get_item_by_category(cat)
+      @items = ItemRepository.get_item_by_category(cat)
+    end
+
     def delete_item
       @item = ItemRepository.delete_item(:id)
     end
