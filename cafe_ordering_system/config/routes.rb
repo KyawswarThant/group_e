@@ -27,4 +27,9 @@ Rails.application.routes.draw do
 
   get "waiter_password", to: "waiters#waiter_change_password"
   post "waiter_password", to: "waiters#waiter_update_password"
+
+  #waiter order process
+  post "select", to: "waiters#select_item"
+  post "cancel", to: "waiters#cancel_item"
+  post "confirm", to: "waiters#confirm_order"
 end

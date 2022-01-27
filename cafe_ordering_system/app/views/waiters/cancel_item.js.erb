@@ -1,0 +1,4 @@
+$(".cancel").bind("ajax:success", function() {
+  console.log("reach");
+  $("#tbody").replaceWith("<%= j render "orders", orders: session[:orders], total_price: session[:total_price] %>")
+})

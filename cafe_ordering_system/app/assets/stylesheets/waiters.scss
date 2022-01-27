@@ -6,9 +6,9 @@
 .container {
   margin: 50px auto auto auto;
   padding: 50px;
+  border: solid #8fa8a9;
   max-width: 400px;
   border-radius: 20px;
-  border: solid #8fa8a9;
 }
 .nav {
   display: flex;
@@ -20,21 +20,21 @@
   display: inline-flex;
 }
 .nav ul li {
-  padding: 10px;
   margin-right: 20px;
+  padding: 10px;
 }
 .nav ul li:last-child {
   margin-right: 0;
 }
 .ttl-logo {
-  font-size: 30px;
-  font-family: fantasy;
-  font-style: italic;
   color: dimgray;
+  font-family: fantasy;
+  font-size: 30px;
+  font-style: italic;
 }
 .link {
-  text-decoration: none;
   color: #000000;
+  text-decoration: none;
 }
 .is-active {
   color: rgb(179, 255, 0);
@@ -46,10 +46,10 @@
   color: #ffffff;
 }
 h2 {
-  text-align: center;
+  color: cadetblue;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 24px;
-  color: cadetblue;
+  text-align: center;
 }
 .text-danger {
   color: red;
@@ -59,8 +59,8 @@ h2 {
   margin: 50px auto auto auto;
 }
 .login-photo {
-  text-align: center;
   margin-bottom: 20px;
+  text-align: center;
 }
 .logo {
   width: 100px;
@@ -72,9 +72,9 @@ h2 {
   width: calc(100% - 25px);
   padding: 10px;
   border: 2px solid #8fa8a9;
-  border-radius: 10px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 16px;
+  border-radius: 10px;
 }
 .text-box:hover {
   border-color: rgb(31, 158, 31);
@@ -95,9 +95,9 @@ h2 {
 .submit-btn,
 .cancel-btn {
   width: 100px;
-  text-align: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
   border-radius: 10px;
 }
 .cancel-btn {
@@ -111,16 +111,16 @@ h2 {
 
 // Waiter Profile & change password
 .outer-container{
-  max-width: 1400px;
   margin: 0 auto;
+  max-width: 1400px;
 }
 .profile-password {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 16px;
   display: flex;
   justify-content:space-around;
   margin-top: 10px;
   margin-left: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
 }
 
 .mb-10 {
@@ -135,9 +135,9 @@ h2 {
 
 .left {
   margin-right: 30px;
-  font-weight: bold;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 18px;
+  font-weight: bold;
   text-align: right;
 }
 
@@ -173,24 +173,25 @@ h2 {
   margin: 20px 18px 20px 0px;
 }
 .card img{
+  margin-bottom: 10px;
   border: 2px solid #916cd6;
   border-radius: 7px;
-  margin-bottom: 10px;
 }
 .card:nth-child(5n+5) {
   margin-right: 0;
 }
 .cat-title {
-  font-size: 40px;
   margin: 20px 0;
   padding: 2px;
+  font-size: 40px;
   text-align: center;
   border-bottom: 1px solid #808080;
 }
 .item-detail {
   margin-bottom: 20px;
-  list-style-type: none;
+  font-size: 20px;
   text-align: center;
+  list-style-type: none;
 }
 .item-detail li {
   margin-bottom: 10px;
@@ -198,7 +199,7 @@ h2 {
 .btn {
   display: block;
   margin-top: 10px;
-  padding: 10px 0;
+  padding: 10px 5px;
   background-color: #0275d8;
   color: #ffffff;
   text-decoration: none;
@@ -206,25 +207,22 @@ h2 {
 }
 /*Aside*/
 .aside {
+  position: sticky;
+  top: 110px;
   float: right;
   width: 380px;
-  margin-top: 70px;
-}
-.order-list {
-  position: fixed;
-  margin-left: 20px;
 }
 .order-title {
+  margin-bottom: 20px;
   font-size: 30px;
   text-align: center;
-  margin-bottom: 20px;
 }
 .cancel {
   color: #808080;
 }
 .table {
-  border-collapse: collapse;
   text-align: center;
+  border-collapse: collapse;
 }
 .thead {
   border-bottom: 1px solid #808080;
@@ -233,9 +231,10 @@ h2 {
   border-top: 1px solid #808080;
 }
 .thead th {
-  font-size: 20px;
   padding: 5px;
+  font-size: 20px;
 }
 .table td {
   padding: 10px;
+  font-size: 20px;
 }

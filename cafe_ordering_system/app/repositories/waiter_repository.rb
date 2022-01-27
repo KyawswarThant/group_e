@@ -25,5 +25,13 @@ class WaiterRepository
     def update_password(waiter, password)
       @is_update_password = waiter.update_attribute(:password, password)
     end
+
+    def create_order(waiter, status, total_price)
+      @order = waiter.orders.create(status: status, total_price: total_price)
+    end
+
+    def create_order_items(waiter_order, items)
+      @order_items = waiter_order.order_items.create(items)
+    end
   end
 end

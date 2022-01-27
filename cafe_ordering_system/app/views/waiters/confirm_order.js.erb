@@ -1,0 +1,3 @@
+$(".confirm").bind("ajax:success", () => {
+  $("#tbody").replaceWith("<%= j render "orders", orders: [] %>")
+})

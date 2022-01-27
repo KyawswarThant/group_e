@@ -8,16 +8,14 @@
       <div class="clearfix">
         <% @coffee.each do |item| %>
           <div class="items-div">
-            <% if item.category.downcase == "coffee" %>
-              <p><%= image_tag item.image.url(:original) %></p>
-              <p class="item-detail"><%= item.name %></p>
-              <p class="item-detail">$<%= item.price %></p>
-              <p class="link-btn"><%= link_to "Update ", edit_item_path(item[:id]) %>
-              </p>
-              <p class="link-btn">
-                <%= link_to "Delete", item_path(item[:id]), method: :delete, data: { confirm: "Are you sure you want to delete this item?" } %>
-              </p>
-            <% end %>
+            <p><%= image_tag item.image.url(:original) %></p>
+            <p class="item-detail"><%= item.name %></p>
+            <p class="item-detail">$<%= item.price %></p>
+            <p class="link-btn"><%= link_to "Update ", edit_item_path(item[:id]) %>
+            </p>
+            <p class="link-btn">
+              <%= link_to "Delete", item_path(item[:id]), method: :delete, data: { confirm: "Are you sure you want to delete this item?" } %>
+            </p>
           </div>
         <% end %>
       </div>
@@ -27,18 +25,16 @@
     <div>
       <h2 class="hdr"><%= @icecream[0].category.capitalize %></h2>
       <div class="clearfix">
-        <% @items.each do |item| %>
+        <% @icecream.each do |item| %>
           <div class="items-div">
-            <% if item.category.downcase == "ice cream" %>
-              <p><%= image_tag item.image.url(:original) %></p>
-              <p class="item-detail"><%= item.name %></p>
-              <p class="item-detail">$<%= item.price %></p>
-              <p class="link-btn"><%= link_to "Update", edit_item_path(item[:id]) %>
-              </p>
-              <p class="link-btn">
-                <%= link_to "Delete", item_path(item[:id]), method: :delete, data: { confirm: "Are you sure you want to delete this item?" } %>
-              </p>
-            <% end %>
+            <p><%= image_tag item.image.url(:original) %></p>
+            <p class="item-detail"><%= item.name %></p>
+            <p class="item-detail">$<%= item.price %></p>
+            <p class="link-btn"><%= link_to "Update", edit_item_path(item[:id]) %>
+            </p>
+            <p class="link-btn">
+              <%= link_to "Delete", item_path(item[:id]), method: :delete, data: { confirm: "Are you sure you want to delete this item?" } %>
+            </p>
           </div>
         <% end %>
       </div>
@@ -50,16 +46,14 @@
       <div class="clearfix">
         <% @cake.each do |item| %>
           <div class="items-div">
-            <% if item.category.downcase == "cake" %>
-              <p><%= image_tag item.image.url(:original) %></p>
-              <p class="item-detail"><%= item.name %></p>
-              <p class="item-detail">$<%= item.price %></p>
-              <p class="link-btn"><%= link_to "Update", edit_item_path(item[:id]) %>
-              </p>
-              <p class="link-btn">
-                <%= link_to "Delete", item_path(item[:id]), method: :delete, data: { confirm: "Are you sure you want to delete this item?" } %>
-              </p>
-            <% end %>
+            <p><%= image_tag item.image.url(:original) %></p>
+            <p class="item-detail"><%= item.name %></p>
+            <p class="item-detail">$<%= item.price %></p>
+            <p class="link-btn"><%= link_to "Update", edit_item_path(item[:id]) %>
+            </p>
+            <p class="link-btn">
+              <%= link_to "Delete", item_path(item[:id]), method: :delete, data: { confirm: "Are you sure you want to delete this item?" } %>
+            </p>
           </div>
         <% end %>
       </div>
@@ -71,16 +65,14 @@
       <div class="clearfix">
         <% @tea.each do |item| %>
           <div class="items-div">
-            <% if item.category.downcase == "tea" %>
-              <p><%= image_tag item.image.url(:original) %></p>
-              <p class="item-detail"><%= item.name %></p>
-              <p class="item-detail">$<%= item.price %></p>
-              <p class="link-btn"><%= link_to "Update", edit_item_path(item[:id]) %>
-              </p>
-              <p class="link-btn">
-                <%= link_to "Delete", item_path(item[:id]), method: :delete, data: { confirm: "Are you sure you want to delete this item?" } %>
-              </p>
-            <% end %>
+            <p><%= image_tag item.image.url(:original) %></p>
+            <p class="item-detail"><%= item.name %></p>
+            <p class="item-detail">$<%= item.price %></p>
+            <p class="link-btn"><%= link_to "Update", edit_item_path(item[:id]) %>
+            </p>
+            <p class="link-btn">
+              <%= link_to "Delete", item_path(item[:id]), method: :delete, data: { confirm: "Are you sure you want to delete this item?" } %>
+            </p>
           </div>
         <% end %>
       </div>
