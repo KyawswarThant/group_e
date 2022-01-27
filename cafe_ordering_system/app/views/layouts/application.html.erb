@@ -11,6 +11,8 @@
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
     crossorigin="anonymous">
     <%= stylesheet_link_tag "application", params[:controller], media: "all", 'data-turbolinks-track': "reload" %>
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <%= javascript_pack_tag "application", 'data-turbolinks-track': "reload" %>
   </head>
 
@@ -20,7 +22,9 @@
     <% elsif alert %>
       <p class="alert"><%= alert %></p>
     <% end %>
-    <%= render "layouts/header" %>
+    <% unless current_page?(controller: "waiter_login", action: "index") || current_page?(controller: "chef_login", action: "index") %>
+      <%= render "layouts/header" %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

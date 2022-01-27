@@ -2,10 +2,10 @@ class WaitersController < ApplicationController
   before_action :waiter_authorized, only: [:index, :profile, :edit_profile]
 
   def index
-    @coffee = Item.where(category: "coffee")
-    @icecream = Item.where(category: "icecream")
-    @tea = Item.where(category: "tea")
-    @cake = Item.where(category: "cake")
+    @coffee = ItemService.get_item_by_category("Coffee")
+    @icecream = ItemService.get_item_by_category("Ice Cream")
+    @tea = ItemService.get_item_by_category("Tea")
+    @cake = ItemService.get_item_by_category("Cake")
     @orders = Array.new
     if session[:orders]
       @orders = session[:orders]
@@ -82,9 +82,77 @@ class WaitersController < ApplicationController
     end
   end
 
+  def select_item
+    # Initialize the orders array if doesn't exist
+    session[:orders] = Array.new unless session[:orders]
+    # Initialize total_price if doesn't exist
+    session[:total_price] = 0 unless session[:total_price]
+    same = false
+    item_name = params[:name]
+    item_quantity = params[:quantity].to_i
+    item_price = item_quantity.to_i * params[:price].to_i
+    session[:total_price] += item_price
+    if session[:orders]
+      session[:orders].each do |order|
+        # check the value equal to selected item_name for duplicate item
+        if order.value?(item_name)
+          same = true
+          order.merge!({ "item_name" => item_name, "quantity" => order.values[1] + item_quantity, "price" => order.values[2] + item_price })
+        end
+      end
+    end
+    unless same == true
+      order = Hash[item_name: item_name, quantity: item_quantity, price: item_price]
+      session[:orders].push(order)
+    end
+    print session[:orders]
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def cancel_item
+    item_name = params[:item_name]
+    cancel_item = nil
+    for i in 0..session[:orders].length - 1
+      session[:orders][i].each do |key, value|
+        if (key == "item_name" && value == item_name)
+          # make item list to remove from session[:orders]
+          cancel_item = i
+        end
+      end
+    end
+    session[:total_price] -= session[:orders][cancel_item].values[2]
+    session[:orders].delete_at(cancel_item)
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def confirm_order
+    orders = order_params
+    waiter = WaiterService.get_waiter_by_id(session[:waiter_id])
+    # create waiter's order
+    waiter_order = WaiterService.create_order(waiter, "initialized", orders[:total_price])
+    # create items with that order
+    orders[:orders].each do |order|
+      WaiterService.create_order_items(waiter_order, order)
+    end
+    # delete the orders and total_price affter confirm one orders list
+    session.delete(:orders)
+    session.delete(:total_price)
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
 
   def waiter_params
     params.require(:waiter).permit(:name, :email, :password, :phone, :birthday, :address)
+  end
+
+  def order_params
+    params.permit(:total_price, :_method, :authenticity_token, :orders => [:item_name, :quantity, :price])
   end
 end

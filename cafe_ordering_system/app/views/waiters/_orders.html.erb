@@ -1,0 +1,22 @@
+<tbody id="tbody">
+  <% unless orders.length < 1 %>
+    <% orders.each do |order| %>
+      <tr>
+        <% order.each do |key, value| %>
+          <td><%= value %></td>
+        <% end %>
+        <td>
+          <a href="<%= cancel_path(item_name: order.values.first) %>" data-remote = true, data-method = "post" class="cancel">
+            <i class="fas fa-minus text-secondary"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+    <tr class="tfoot">
+      <td>
+        <%= link_to "Confirm Order", confirm_path(total_price: session[:total_price], orders: orders), remote: true, method: "post", class: "btn confirm" %>
+      </td>
+      <td colspan="2">Total Price $<%= total_price %></td>
+    </tr>
+  <% end %>
+</tbody>

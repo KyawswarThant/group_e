@@ -25,5 +25,13 @@ class WaiterService
     def update_password(waiter, password)
       @is_update_password = WaiterRepository.update_password(waiter, password)
     end
+
+    def create_order(waiter, status, total_price)
+      @order = WaiterRepository.create_order(waiter, status, total_price)
+    end
+
+    def create_order_items(waiter_order, items)
+      @order_items = WaiterRepository.create_order_items(waiter_order, items)
+    end
   end
 end

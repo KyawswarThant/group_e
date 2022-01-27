@@ -11,27 +11,27 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_self
- *= require reset.css 
+ *= require reset.css
 */
 @import "reset";
 .notice {
-  width: 100%;
   position: absolute;
   top: 0;
-  text-align: center;
+  width: 100%;
   color: red;
+  text-align: center;
 }
 .alert {
-  width: 100%;
   position: absolute;
   top: 0;
-  text-align: center;
+  width: 100%;
   color: green;
+  text-align: center;
 }
 .error {
   color: red;
 }
-/*item category header*/
+/* item */
 .hdr {
   padding-top: 20px;
   padding-bottom: 15px;
@@ -41,4 +41,8 @@
   font-weight: bold;
   text-align: center;
   font-style: italic;
+}
+.fa-plus-square,
+.fa-minus-square {
+  font-size: 20px;
 }
