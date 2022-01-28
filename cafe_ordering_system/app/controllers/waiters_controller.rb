@@ -133,7 +133,7 @@ class WaitersController < ApplicationController
     orders = order_params
     waiter = WaiterService.get_waiter_by_id(session[:waiter_id])
     # create waiter's order
-    waiter_order = WaiterService.create_order(waiter, "initialized", orders[:total_price])
+    waiter_order = WaiterService.create_order(waiter, "pending", orders[:total_price])
     # create items with that order
     orders[:orders].each do |order|
       WaiterService.create_order_items(waiter_order, order)

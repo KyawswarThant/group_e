@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :chefs
   resources :waiters
   resources :items
+  resources :order_items
 
   get "chef_login", to: "chef_login#index"
   post "chef_sign_in", to: "chef_login#sign_in"
@@ -32,4 +33,8 @@ Rails.application.routes.draw do
   post "select", to: "waiters#select_item"
   post "cancel", to: "waiters#cancel_item"
   post "confirm", to: "waiters#confirm_order"
+
+  #chef order process
+  post "processing", to: "order_items#processing_item"
+  post "finished", to: "order_items#finish"
 end

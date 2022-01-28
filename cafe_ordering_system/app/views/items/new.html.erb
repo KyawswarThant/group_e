@@ -6,36 +6,6 @@
   <% end %>
   <h2>Create New Item</h2>
   <div class="create-form">
-    <%= form_with model: @item do |f| %>
-      <div class="mb-20">
-        <%= f.text_field :category, class: "cat", placeholder: "Item Category" %>
-        <% @item.errors.full_messages_for(:category).each do |message| %>
-          <div class="text-danger"><%= message %></div>
-        <% end %>
-      </div>
-      <div class="mb-20">
-        <%= f.text_field :name, class: "name", placeholder: "Item Name" %>
-        <% @item.errors.full_messages_for(:name).each do |message| %>
-          <div class="text-danger"><%= message %></div>
-        <% end %>
-      </div>
-      <div class="mb-20">
-        <%= f.text_field :price, class: "price", placeholder: "Item Price" %>
-        <% @item.errors.full_messages_for(:price).each do |message| %>
-          <div class="text-danger"><%= message %></div>
-        <% end %>
-      </div>
-      <div class="mb-20">
-        <div class="button-wrap">
-          <label class="upload-button" for="item_image">Upload an Image</label>
-          <%= f.file_field :image %>
-          <% @item.errors.full_messages_for(:image).each do |message| %>
-            <div class="text-danger"><%= message %></div>
-          <% end %>
-        </div>
-      </div>
-      <div class="mb-20"><%= f.button :submit, class: "btn-submit" %></div>
-      <div><%= link_to "Go Back", items_path, class: "back-button" %></div>
-    <% end %>
+    <%= render "form" %>
   </div>
 </div>

@@ -78,7 +78,17 @@ h2 {
   color: #ff0000;
 }
 
-.cat,
+.form-select {
+  width: calc(100%);
+  padding: 10px;
+  border: 2px solid #8fa8a9;
+  color: #726e6e;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  border-radius: 10px;
+
+}
+
 .name,
 .price {
   width: calc(100% - 25px);
@@ -93,15 +103,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-.edit-btn {
-  margin-top: 50px;
-  padding: 8px 20px;
-  border: 2px solid #8fa8a9;
-  border-radius: 5px;
-}
-
 .btn-submit {
-  margin-top: 50px;
   padding: 8px 20px;
   border: 2px solid #8fa8a9;
   border-radius: 5px;
@@ -209,25 +211,17 @@ h3 {
   color: #ffffff;
 }
 
-.upload-button {
-  display: inline-block;
-  padding: 8px 12px;
-  background-color: #9c27b0;
-  color: #fff;
+.img-field-tag::file-selector-button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #0ea5aa;
+  color: #ffffff;
+  font-family: sans-serif;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
-input[type="file"] {
-  position: absolute;
-  top: 6px;
-  left: 38px;
-  z-index: -1;
-  color: rgb(153, 153, 153);
+.img-field-tag {
   font-size: 15px;
-}
-
-.button-wrap {
-  position: absolute;
 }
