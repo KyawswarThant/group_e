@@ -1,5 +1,5 @@
 class WaitersController < ApplicationController
-  before_action :waiter_authorized, only: [:index, :profile, :edit_profile]
+  before_action :waiter_authorized, only: [:index, :profile, :edit_profile, :get_orders]
 
   def index
     @coffee = ItemService.get_item_by_category("Coffee")
@@ -144,6 +144,14 @@ class WaitersController < ApplicationController
     respond_to do |format|
       format.js
     end
+  end
+
+  def get_orders
+    @orders = WaiterService.get_waiter_orders(session[:waiter_id])
+  end
+
+  def pick_order
+    OrderService.update_status(params[:id], "pickup")
   end
 
   private

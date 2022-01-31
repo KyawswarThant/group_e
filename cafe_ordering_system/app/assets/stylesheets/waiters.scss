@@ -208,11 +208,11 @@ h2 {
 /*Aside*/
 .aside {
   position: sticky;
-  top: 110px;
+  top: 118px;
   float: right;
   width: 380px;
 }
-.order-title {
+.aside-title {
   margin-bottom: 20px;
   font-size: 30px;
   text-align: center;
@@ -223,6 +223,7 @@ h2 {
 .table {
   text-align: center;
   border-collapse: collapse;
+  width: 100%;
 }
 .thead {
   border-bottom: 1px solid #808080;
@@ -238,3 +239,36 @@ h2 {
   padding: 10px;
   font-size: 20px;
 }
+.status {
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.status-title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.btn-detail,
+.btn-pick {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000000;
+  border: 1px solid #808080;
+}
+.btn-back {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #000000;
+  border: 1px solid #808080;
+}
+.btn-detail:hover,
+.btn-pick:hover,
+.btn-back:hover {
+  background-color: #0275d8;
+  color: white;
+}
+

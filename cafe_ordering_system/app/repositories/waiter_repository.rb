@@ -16,6 +16,11 @@ class WaiterRepository
       @waiter = Waiter.find(id)
     end
 
+    # get waiter orders
+    def get_waiter_orders(id)
+      @waiter_orders = Waiter.find(id).orders.where.not(status: "pickup").order(:status)
+    end
+
     #update waiter profile
     def update_waiter(waiter, waiter_params)
       @is_update_waiter = waiter.update(waiter_params)

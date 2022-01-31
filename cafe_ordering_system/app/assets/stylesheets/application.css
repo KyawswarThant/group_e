@@ -31,6 +31,9 @@
 .error {
   color: red;
 }
+.center {
+  text-align: center;
+}
 /* item */
 .hdr {
   padding-top: 20px;

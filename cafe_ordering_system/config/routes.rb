@@ -33,6 +33,8 @@ Rails.application.routes.draw do
   post "select", to: "waiters#select_item"
   post "cancel", to: "waiters#cancel_item"
   post "confirm", to: "waiters#confirm_order"
+  get "orders", to: "waiters#get_orders"
+  post "pick_order", to: "waiters#pick_order"
 
   #chef order process
   post "processing", to: "order_items#processing_item"
