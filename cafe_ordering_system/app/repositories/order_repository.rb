@@ -11,5 +11,10 @@ class OrderRepository
     def update_status_finish
       @order.update(status: "finished")
     end
+
+    def update_status(id, status)
+      @order = Order.find(id)
+      @update_order = @order.update(status: status)
+    end
   end
 end

@@ -16,6 +16,10 @@ class WaiterService
       @waiter = WaiterRepository.get_waiter_by_id(id)
     end
 
+    def get_waiter_orders(id)
+      @waiter_orders = WaiterRepository.get_waiter_orders(id)
+    end
+
     #update waiter profile
     def update_waiter(waiter, waiter_params)
       @is_waiter_update = WaiterRepository.update_waiter(waiter, waiter_params)

@@ -11,5 +11,9 @@ class OrderService
     def update_status_finish
       @order = OrderRepository.update_status_finish
     end
+
+    def update_status(id, status)
+      @update_order = OrderRepository.update_status(id, status)
+    end
   end
 end
