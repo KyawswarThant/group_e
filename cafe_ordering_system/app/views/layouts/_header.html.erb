@@ -4,8 +4,8 @@
     <% if session[:waiter_id] || session[:chef_id] %>
       <% if session[:chef_id] %>
         <li>
-          <%= link_to "Order Lists", chefs_path,
-                      class: "link #{"is-active" if current_page?(controller: "chefs", action: "index")}" %>
+          <%= link_to "Order Lists", order_items_path,
+                      class: "link #{"is-active" if current_page?(controller: "order_items", action: "index")}" %>
         </li>
       <% end %>
       <li>

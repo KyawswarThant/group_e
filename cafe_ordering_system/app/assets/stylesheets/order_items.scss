@@ -1,0 +1,115 @@
+.main-container {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background: #d2b48c;
+}
+
+.nav ul {
+  display: inline-flex;
+}
+
+.nav ul li {
+  margin-right: 20px;
+  padding: 10px;
+  color: #000000;
+}
+
+.nav ul li:last-child {
+  margin-right: 0;
+}
+
+.ttl-logo {
+  color: #696969;
+  font-family: fantasy;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.is-active {
+  color: rgb(179, 255, 0);
+}
+
+.nav ul li:hover {
+  background-color: #696969;
+}
+
+.nav ul li:hover .link {
+  color: #ffffff;
+}
+
+.inner-container {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.hdr {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.order-dtil {
+  line-height: 30px;
+  //margin: 10px 10px 30px 10px;
+  margin-bottom: 40px;
+  padding: 10px;
+  border: 2px solid #8fa8a9;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+
+table,
+tr {
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+
+th {
+  border: 2px solid #ffffff;
+  background-color: #deb887;
+  font-style: italic;
+}
+
+td {
+  line-height: 40px;
+}
+
+.order-list-btn-div {
+  text-align: center;
+}
+
+.btn-process,
+.btn-finish {
+  display: inline-block;
+  margin: 20px 20px 20px 20px;
+  padding: 5px 10px;
+  border: 2px solid #000000;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+}
