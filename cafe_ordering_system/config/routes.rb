@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "waiter_login", to: "waiter_login#index"
   post "waiter_sign_in", to: "waiter_login#sign_in"
   post "waiter_sign_out", to: "waiter_login#sign_out"
+  get "graph", to: "chefs#graph"
 
   get "chef_forget_password", to: "chef_password_resets#index"
   post "chef_forget_password", to: "chef_password_resets#create"

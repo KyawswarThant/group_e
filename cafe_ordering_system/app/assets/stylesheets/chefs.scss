@@ -111,6 +111,37 @@ h2 {
   background-color: rgb(30, 12, 189);
   color: #ffffff;
 }
+
+// graph page
+.graph-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.chart-container {
+  width: 60%;
+  margin: 0 auto;
+}
+.graph-ttl {
+  text-align: center;
+  font-family: Georgia,'Times New Roman', Times, serif;
+  font-size: 24px;
+  color: dimgray;
+  margin-top: 20px;
+}
+.graph-form {
+  width: 60%;
+  margin: 50px auto;
+}
+.graph-submit {
+  text-align: center;
+}
+.graph-content {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
 // chef profile & change password
 .outer-container{
   max-width: 1400px;

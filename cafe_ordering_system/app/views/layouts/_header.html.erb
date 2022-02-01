@@ -15,7 +15,7 @@
                     session[:waiter_id] ? waiter_path(id: session[:waiter_id]) : chef_path(id: session[:chef_id]),
                     class: "link #{"is-active" if current_page?("http://localhost:3000/chefs/#{session[:chef_id]}") || current_page?("http://localhost:3000/waiters/#{session[:waiter_id]}")}" %>
       </li>
-      <li>Graph</li>
+      <li><%= link_to "Graph", graph_path, class: "link" %></li>
       <li>
         <%= link_to "Log Out", session[:waiter_id] ? waiter_sign_out_path : chef_sign_out_path, class: "link", method: :post %>
       </li>

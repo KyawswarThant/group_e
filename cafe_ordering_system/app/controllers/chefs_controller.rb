@@ -70,6 +70,30 @@ class ChefsController < ApplicationController
     end
   end
 
+  def graph
+    @start_date = Date.today - 7
+    @end_date = Date.today - 1
+
+    if params.has_key?(:graph_date)
+      @start_date = params[:graph_date]
+      @end_date = params[:graph_date].to_date + 6
+    end
+
+    @orders = OrderItem.find_by_sql(
+      "SELECT item_name, created_at, SUM(quantity) as total 
+      FROM order_items 
+      WHERE created_at BETWEEN '#{@start_date} 00:00:00' AND '#{@end_date} 23:59:59'
+      GROUP BY item_name
+      ORDER BY total DESC
+      LIMIT 7" 
+    )
+    @graph_data = {}
+
+    @orders.each do |order|
+      @graph_data[order.item_name] = order.total
+    end
+  end
+
   private
 
   def chef_params
