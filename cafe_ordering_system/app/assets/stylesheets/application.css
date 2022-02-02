@@ -14,6 +14,17 @@
  *= require reset.css
 */
 @import "reset";
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
 .notice {
   position: absolute;
   top: 0;
@@ -21,6 +32,7 @@
   color: red;
   text-align: center;
 }
+
 .alert {
   position: absolute;
   top: 0;
@@ -28,12 +40,71 @@
   color: green;
   text-align: center;
 }
+
 .error {
   color: red;
 }
+
 .center {
   text-align: center;
 }
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+/* nav */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background: #d2b48c;
+}
+
+.nav ul {
+  display: inline-flex;
+}
+.nav ul li {
+  margin-right: 20px;
+}
+
+.nav ul li a {
+  display: inline-block;
+  padding: 10px;
+}
+
+.nav ul li:last-child {
+  margin-right: 0;
+}
+
+.ttl-logo {
+  color: dimgray;
+  font-family: fantasy;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.is-active {
+  color: darkviolet;
+}
+
+.nav ul li a:hover {
+  background-color: dimgray;
+}
+
+.nav ul li:hover .link {
+  color: #ffffff;
+}
+
 /* item */
 .hdr {
   padding-top: 20px;
@@ -45,6 +116,7 @@
   text-align: center;
   font-style: italic;
 }
+
 .fa-plus-square,
 .fa-minus-square {
   font-size: 20px;

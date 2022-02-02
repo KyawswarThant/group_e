@@ -1,3 +1,3 @@
 $(".btn-pick").bind("ajax:success", function() {
-  $("this").closest("tr").fadeOut();
+  $(".order-detail").replaceWith("<%= j render "order_detail", orders: @orders %>")
 })

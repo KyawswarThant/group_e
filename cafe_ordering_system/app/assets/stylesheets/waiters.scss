@@ -10,64 +10,36 @@
   max-width: 400px;
   border-radius: 20px;
 }
-.nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 30px;
-  background: #d2b48c;
-}
-.nav ul {
-  display: inline-flex;
-}
-.nav ul li {
-  margin-right: 20px;
-  padding: 10px;
-}
-.nav ul li:last-child {
-  margin-right: 0;
-}
-.ttl-logo {
-  color: dimgray;
-  font-family: fantasy;
-  font-size: 30px;
-  font-style: italic;
-}
-.link {
-  color: #000000;
-  text-decoration: none;
-}
-.is-active {
-  color: rgb(179, 255, 0);
-}
-.nav ul li:hover {
-  background-color: dimgray;
-}
-.nav ul li:hover .link {
-  color: #ffffff;
-}
+
 h2 {
   color: cadetblue;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 24px;
   text-align: center;
 }
+
 .text-danger {
   color: red;
 }
+
 .login-form {
   width: 80%;
   margin: 50px auto auto auto;
 }
+
 .login-photo {
   margin-bottom: 20px;
   text-align: center;
 }
+
 .logo {
   width: 100px;
 }
+
 .mb-20 {
   margin-bottom: 20px;
 }
+
 .text-box {
   width: calc(100% - 25px);
   padding: 10px;
@@ -76,22 +48,27 @@ h2 {
   font-size: 16px;
   border-radius: 10px;
 }
+
 .text-box:hover {
   border-color: rgb(31, 158, 31);
 }
+
 .login-link {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
+
 .submit {
   display: flex;
   justify-content: space-between;
 }
+
 .submit-btn:hover {
   background-color: green;
   color: #ffffff;
 }
+
 .submit-btn,
 .cancel-btn {
   width: 100px;
@@ -100,23 +77,26 @@ h2 {
   text-align: center;
   border-radius: 10px;
 }
+
 .cancel-btn {
   border: 1px solid;
   text-decoration: none;
 }
+
 .cancel-btn:hover {
-  background-color: rgb(30, 12, 189);
+  background-color: #0275d8;
   color: #ffffff;
 }
 
 // Waiter Profile & change password
-.outer-container{
+.outer-container {
   margin: 0 auto;
   max-width: 1400px;
 }
+
 .profile-password {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   margin-top: 10px;
   margin-left: 10px;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -153,33 +133,30 @@ h2 {
   width: 1300px;
   margin: 0 auto;
 }
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: " ";
-}
-.clearfix:after {
-  clear: both;
-}
+
 /*Section*/
 .section {
   float: left;
   width: 900px;
   margin-top: 20px;
 }
+
 .card {
   display: inline-block;
   width: 23%;
   margin: 20px 18px 20px 0px;
 }
-.card img{
+
+.card img {
   margin-bottom: 10px;
   border: 2px solid #916cd6;
   border-radius: 7px;
 }
+
 .card:nth-child(5n+5) {
   margin-right: 0;
 }
+
 .cat-title {
   margin: 20px 0;
   padding: 2px;
@@ -187,15 +164,18 @@ h2 {
   text-align: center;
   border-bottom: 1px solid #808080;
 }
+
 .item-detail {
   margin-bottom: 20px;
   font-size: 20px;
   text-align: center;
   list-style-type: none;
 }
+
 .item-detail li {
   margin-bottom: 10px;
 }
+
 .btn {
   display: block;
   margin-top: 10px;
@@ -205,6 +185,7 @@ h2 {
   text-decoration: none;
   text-align: center;
 }
+
 /*Aside*/
 .aside {
   position: sticky;
@@ -212,63 +193,127 @@ h2 {
   float: right;
   width: 380px;
 }
-.aside-title {
+
+.order-title {
   margin-bottom: 20px;
   font-size: 30px;
   text-align: center;
 }
+
 .cancel {
   color: #808080;
 }
+
 .table {
+  width: 100%;
   text-align: center;
   border-collapse: collapse;
-  width: 100%;
 }
+
 .thead {
   border-bottom: 1px solid #808080;
 }
+
 .tfoot {
   border-top: 1px solid #808080;
 }
+
 .thead th {
   padding: 5px;
   font-size: 20px;
 }
+
 .table td {
   padding: 10px;
   font-size: 20px;
 }
-.status {
+
+.detail,
+.order-detail {
   width: 700px;
   margin: 0 auto;
   margin-top: 50px;
 }
-.status-title {
-  margin-bottom: 20px;
-  font-size: 30px;
-  text-align: center;
-}
+
 .btn-detail,
 .btn-pick {
   display: inline-block;
   padding: 10px;
-  text-decoration: none;
-  color: #000000;
   border: 1px solid #808080;
+  color: #000000;
+  text-decoration: none;
 }
+
 .btn-back {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  text-decoration: none;
-  color: #000000;
   border: 1px solid #808080;
+  color: #000000;
+  text-decoration: none;
 }
+
 .btn-detail:hover,
 .btn-pick:hover,
 .btn-back:hover {
   background-color: #0275d8;
-  color: white;
+  color: #ffffff;
 }
 
+.order-item-header {
+  margin: 30px 0 20px;
+  list-style-type: none;
+}
+
+.order-item {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+.order-item-header li,
+.order-item li {
+  display: inline-block;
+  width: 230px;
+  text-align: center;
+}
+
+.order-item-header li {
+  font-size: 24px;
+}
+
+.order-item-footer {
+  margin-top: 30px;
+}
+
+.order-price {
+  text-align: right;
+  border-top: 1px solid #000000;
+}
+
+.order-price span {
+  display: inline-block;
+  width: 230px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.back {
+  width: 195px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.order-notice {
+  display: block;
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #000000;
+  color: #1e9b0d;
+  text-decoration: none;
+  text-align: center;
+}
+
+.order-status {
+  font-size: 18px;
+  text-align: center;
+}

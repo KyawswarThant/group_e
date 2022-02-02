@@ -3,70 +3,10 @@
   max-width: 1400px;
 }
 
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: " ";
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 30px;
-  background: #d2b48c;
-}
-
-.nav ul {
-  display: inline-flex;
-}
-
-.nav ul li {
-  margin-right: 20px;
-  padding: 10px;
-  color: #000000;
-}
-
-.nav ul li:last-child {
-  margin-right: 0;
-}
-
-.ttl-logo {
-  color: #696969;
-  font-family: fantasy;
-  font-size: 30px;
-  font-style: italic;
-}
-
-.link {
-  color: #000000;
-  text-decoration: none;
-}
-
-.is-active {
-  color: rgb(179, 255, 0);
-}
-
-.nav ul li:hover {
-  background-color: #696969;
-}
-
-.nav ul li:hover .link {
-  color: #ffffff;
-}
-
 .inner-container {
   width: 70%;
   margin: 0 auto;
   margin-top: 50px;
-}
-
-.hdr {
-  margin-bottom: 40px;
-  text-align: center;
 }
 
 .order-dtil {
@@ -112,4 +52,9 @@ td {
   text-decoration: none;
   text-align: center;
   border-radius: 5px;
+}
+.btn-process:hover,
+.btn-finish:hover {
+  background-color: #0275d8;
+  color: #ffffff;
 }

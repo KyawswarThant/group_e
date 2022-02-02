@@ -6,6 +6,7 @@ class WaitersController < ApplicationController
     @icecream = ItemService.get_item_by_category("Ice Cream")
     @tea = ItemService.get_item_by_category("Tea")
     @cake = ItemService.get_item_by_category("Cake")
+    @order_notice = ""
     @orders = Array.new
     if session[:orders]
       @orders = session[:orders]
@@ -101,11 +102,13 @@ class WaitersController < ApplicationController
         end
       end
     end
+
     unless same == true
       order = Hash[item_name: item_name, quantity: item_quantity, price: item_price]
       session[:orders].push(order)
     end
-    print session[:orders]
+
+    @order_notice = ""
     respond_to do |format|
       format.js
     end
@@ -122,6 +125,8 @@ class WaitersController < ApplicationController
         end
       end
     end
+
+    @order_notice = ""
     session[:total_price] -= session[:orders][cancel_item].values[2]
     session[:orders].delete_at(cancel_item)
     respond_to do |format|
@@ -141,6 +146,8 @@ class WaitersController < ApplicationController
     # delete the orders and total_price affter confirm one orders list
     session.delete(:orders)
     session.delete(:total_price)
+    # shwo notice about confirm order
+    @order_notice = Messages::ORDER_NOTICE
     respond_to do |format|
       format.js
     end
@@ -150,8 +157,16 @@ class WaitersController < ApplicationController
     @orders = WaiterService.get_waiter_orders(session[:waiter_id])
   end
 
+  def show_order
+    @order = OrderService.get_order_by_id(params[:oid])
+  end
+
   def pick_order
+    @orders = WaiterService.get_waiter_orders(session[:waiter_id])
     OrderService.update_status(params[:id], "pickup")
+    respond_to do |format|
+      format.js
+    end
   end
 
   private

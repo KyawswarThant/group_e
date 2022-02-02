@@ -5,7 +5,7 @@ class ChefLoginController < ApplicationController
     # check if authenticate or not
     if @chef && @chef.authenticate(params[:password])
       session[:chef_id] = @chef.id
-      redirect_to chefs_path
+      redirect_to order_items_path
     else
       redirect_to chef_login_path, notice: Messages::LOGIN_ERR
     end
