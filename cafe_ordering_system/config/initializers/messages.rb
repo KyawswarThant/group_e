@@ -7,4 +7,6 @@ module Messages
   CONFIRM_PASSWORD_REQUIRED = "confirm password is required"
   CONFIRM_PASSWORD_VALIDATION = "confirm password does not match!"
   PASSWORD_CHANGE_SUCCESS = "password change successfully"
+  # notices
+  ORDER_NOTICE = "Successfully confirm order!"
 end

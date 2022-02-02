@@ -3,67 +3,12 @@
   max-width: 1400px;
 }
 
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: " ";
-}
-
-.clearfix:after {
-  clear: both;
-}
-
 .container {
   margin: 50px auto auto auto;
   padding: 50px;
   border: solid #8fa8a9;
   max-width: 400px;
   border-radius: 20px;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 30px;
-  background: #d2b48c;
-}
-
-.nav ul {
-  display: inline-flex;
-}
-
-.nav ul li {
-  margin-right: 20px;
-  padding: 10px;
-  color: #000000;
-}
-
-.nav ul li:last-child {
-  margin-right: 0;
-}
-
-.ttl-logo {
-  color: #696969;
-  font-family: fantasy;
-  font-size: 30px;
-  font-style: italic;
-}
-
-.link {
-  color: #000000;
-  text-decoration: none;
-}
-
-.is-active {
-  color: rgb(179, 255, 0);
-}
-
-.nav ul li:hover {
-  background-color: #696969;
-}
-
-.nav ul li:hover .link {
-  color: #ffffff;
 }
 
 h2 {
@@ -177,8 +122,15 @@ h3 {
   border-radius: 8px;
 }
 
-.create-item a:hover {
-  background-color: #0b4fa8;
+.create-item a:hover,
+.link-btn a:hover,
+.btn-submit:hover {
+  background-color: #0275d8;
+  color: #ffffff;
+}
+
+.delete-btn a:hover {
+  background-color: #e23434;
   color: #ffffff;
 }
 
@@ -189,7 +141,8 @@ h3 {
   font-size: 18px;
 }
 
-.link-btn {
+.link-btn,
+.delete-btn {
   display: inline-block;
   margin-right: 10px;
   margin-bottom: 20px;
@@ -198,17 +151,12 @@ h3 {
   border-radius: 5px;
 }
 
-.link-btn a {
+.link-btn a,
+.delete-btn a {
   display: block;
   padding: 5px 40px;
   color: #000000;
   text-decoration: none;
-
-}
-
-.link-btn a:hover {
-  background-color: #0b4fa8;
-  color: #ffffff;
 }
 
 .img-field-tag::file-selector-button {
