@@ -22,7 +22,7 @@
     <% elsif alert %>
       <p class="alert"><%= alert %></p>
     <% end %>
-    <% unless current_page?(controller: "waiter_login", action: "index") || current_page?(controller: "chef_login", action: "index") %>
+    <% unless current_page?(controller: "waiter_login", action: "index") || current_page?(controller: "chef_login", action: "index") || current_page?(controller: "chefs", action: "new") || current_page?(controller: "waiters", action: "new") || current_page?(controller: "waiter_password_reset", action: "edit") || current_page?(controller: "waiter_password_reset", action: "index") || current_page?(controller: "chef_password_resets", action: "edit") || current_page?(controller: "chef_password_resets", action: "index") %>
       <%= render "layouts/header" %>
     <% end %>
     <%= yield %>
