@@ -1,5 +1,5 @@
 class WaitersController < ApplicationController
-  before_action :waiter_authorized, only: [:index, :profile, :edit_profile, :get_orders]
+  before_action :waiter_authorized, only: [:index, :update, :show, :edit, :waiter_update_password, :select_item, :cancel_item, :confirm_order, :get_orders, :show_order, :pick_order]
 
   def index
     @coffee = ItemService.get_item_by_category("Coffee")

@@ -1,4 +1,6 @@
 class OrderItemsController < ApplicationController
+  before_action :chef_authorized, only: [:index, :processing_item, :finish]
+
   def index
     @orders = OrderItemService.get_orders
   end

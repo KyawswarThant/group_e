@@ -1,6 +1,6 @@
 class ChefsController < ApplicationController
-  before_action :chef_authorized, only: [:index, :profile, :edit_profile]
-
+  before_action :chef_authorized, only: [:update, :show, :edit, :update_password]
+  before_action :authorized, only: [:graph]
   def new
     @chef = Chef.new
   end

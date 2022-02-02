@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :chef_authorized, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+
   def index
     @coffee = ItemService.get_item_by_category("Coffee")
     @icecream = ItemService.get_item_by_category("Ice Cream")

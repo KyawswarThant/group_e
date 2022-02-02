@@ -35,4 +35,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def authorized
+    unless waiter_logged_in? || chef_logged_in?
+      session.clear
+      redirect_to root_path
+    end
+  end
+
 end
