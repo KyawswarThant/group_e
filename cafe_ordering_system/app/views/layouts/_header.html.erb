@@ -1,5 +1,11 @@
 <div class="nav">
   <a><h1 class="ttl-logo">SCM Cafe</h1></a>
+   <div class="menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="menu menu-sp">
   <ul>
     <% if session[:waiter_id] || session[:chef_id] %>
       <li>
@@ -22,3 +28,20 @@
     <% end %>
   </ul>
 </div>
+</div>
+<script>
+//menu JS
+$(document).ready(function () {
+    $('.menu-btn').click(function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        }
+        else {
+            $(this).addClass('active');
+        }
+        $('.menu-sp').animate({ width: 'toggle' });
+    });
+});
+</script>
+
+

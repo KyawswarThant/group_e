@@ -11,7 +11,6 @@
 
 .order-dtil {
   line-height: 30px;
-  //margin: 10px 10px 30px 10px;
   margin-bottom: 40px;
   padding: 10px;
   border: 2px solid #8fa8a9;
@@ -53,8 +52,95 @@ td {
   text-align: center;
   border-radius: 5px;
 }
+
 .btn-process:hover,
 .btn-finish:hover {
   background-color: #0275d8;
   color: #ffffff;
+}
+
+// For Ipad
+@media screen and (min-width:768px) and (max-width:1024px) {
+  .main-container {
+    max-width: 100%;
+  }
+
+  .inner-container {
+    width: 70%;
+    margin-top: 4.883vw;
+  }
+
+  .order-dtil {
+    line-height: 2.93vw;
+    margin-bottom: 3.906vw;
+    padding: 0.977vw;
+    border: 0.195vw solid #8fa8a9;
+    font-size: 1.953vw;
+    border-radius: 0.977vw;
+  }
+
+  table,
+  tr {
+    width: 100%;
+    font-size: 1.953vw;
+  }
+
+  th {
+    border: 0.195vw solid #ffffff;
+  }
+
+  td {
+    line-height: 3.906vw;
+  }
+
+  .btn-process,
+  .btn-finish {
+    margin: 1.953vw;
+    padding: 0.488vw 0.977vw;
+    border: 0.195vw solid #000000;
+    border-radius: 0.488vw;
+  }
+}
+
+//For SP
+@media screen and (max-width:767.9px) {
+  .main-container {
+    max-width: 100%;
+  }
+
+  .inner-container {
+    width: 70%;
+    margin-top: 7.814vw;
+  }
+
+  .order-dtil {
+    line-height: 4.688vw;
+    margin-bottom: 6.250vw;
+    padding: 1.563vw;
+    border: 0.313vw solid #8fa8a9;
+    font-size: 3.125vw;
+    border-radius: 1.563vw;
+  }
+
+  table,
+  tr {
+    width: 100%;
+    font-size: 3.125vw;
+  }
+
+  th {
+    border: 0.313vw solid #ffffff;
+  }
+
+  td {
+    line-height: 6.25vw;
+  }
+
+  .btn-process,
+  .btn-finish {
+    margin: 3.125vw;
+    padding: 0.781vw 1.563vw;
+    border: 0.313vw solid #000000;
+    border-radius: 0.781vw;
+  }
 }

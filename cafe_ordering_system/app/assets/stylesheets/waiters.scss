@@ -76,6 +76,7 @@ h2 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
   border-radius: 10px;
+  font-size: 16px;
 }
 
 .cancel-btn {
@@ -153,7 +154,7 @@ h2 {
   border-radius: 7px;
 }
 
-.card:nth-child(5n+5) {
+.card:nth-of-type(4n) {
   margin-right: 0;
 }
 
@@ -167,7 +168,7 @@ h2 {
 
 .item-detail {
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   list-style-type: none;
 }
@@ -184,6 +185,7 @@ h2 {
   color: #ffffff;
   text-decoration: none;
   text-align: center;
+  font-size: 16px;
 }
 
 /*Aside*/
@@ -225,7 +227,7 @@ h2 {
 
 .table td {
   padding: 10px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .detail,
@@ -316,4 +318,470 @@ h2 {
 .order-status {
   font-size: 18px;
   text-align: center;
+}
+
+//For Ipad
+@media screen and (min-width:768px) and (max-width:1024px) {
+  container {
+    margin: 4.883vw auto auto auto;
+    padding: 4.883vw;
+    max-width: 39.063vw;
+    border-radius: 1.953vw;
+  }
+
+  h2 {
+    font-size: 2.344vw;
+  }
+
+  .login-form {
+    width: 80%;
+    margin: 4.883vw auto auto auto;
+  }
+
+  .login-photo {
+    margin-bottom: 1.953vw;
+  }
+
+  .logo {
+    width: 9.766vw;
+  }
+
+  .mb-20 {
+    margin-bottom: 1.953vw;
+  }
+
+  .text-box {
+    width: calc(100% - 2.441vw);
+    padding: 0.977vw;
+    border: 0.195vw solid #8fa8a9;
+    font-size: 1.563vw;
+    border-radius: 0.977vw;
+  }
+
+  .login-link {
+    margin-bottom: 1.953vw;
+  }
+
+  .submit-btn,
+  .cancel-btn {
+    width: 9.766vw;
+    padding: 0.977vw;
+    border-radius: 0.977vw;
+    font-size: 1.953vw;
+  }
+
+  .cancel-btn {
+    border: 0.978vw solid;
+  }
+
+  // Waiter Profile & change password
+  .outer-container {
+    max-width: 100%;
+  }
+
+  .profile-password {
+    margin-top: 0.977vw;
+    margin-left: 0.977vw;
+    font-size: 1.563vw;
+  }
+
+  .mb-10 {
+    margin-bottom: 0.977vw;
+  }
+
+  .left {
+    margin-right: 2.93vw;
+    font-size: 1.758vw;
+  }
+
+  .right {
+    margin-left: -0.684vw;
+    font-size: 1.758vw;
+  }
+
+  //Waiter Item List
+  .item-container {
+    width: 95%;
+
+  }
+
+  /*Section*/
+  .section {
+    width: 66.23%;
+    margin-top: 1.953vw;
+  }
+
+  .card {
+    width: 22%;
+    margin: 1.953vw 1.758vw 1.953vw 0px;
+  }
+
+  .card img {
+    height: 16.973vw;
+    margin-bottom: 0.977vw;
+    border: 0.195vw solid #916cd6;
+    border-radius: 0.684vw;
+  }
+
+  .cat-title {
+    margin: 1.953vw 0;
+    padding: 0.195vw;
+    font-size: 3.906vw;
+    text-align: center;
+    border-bottom: 0.098vw solid #808080;
+  }
+
+  .item-detail {
+    margin-bottom: 1.953vw;
+    font-size: 1.563vw;
+  }
+
+  .item-detail li {
+    margin-bottom: 0.977vw;
+  }
+
+  .btn {
+    margin-top: 0.977vw;
+    padding: 0.977vw 0.488vw;
+    font-size: 1.563vw;
+  }
+
+  /*Aside*/
+  .aside {
+    top: 10.742vw;
+    width: 33.3%;
+  }
+
+  .order-title {
+    margin-bottom: 1.953vw;
+    font-size: 2.93vw;
+  }
+
+  .thead {
+    border-bottom: 0.098vw solid #808080;
+  }
+
+  .tfoot {
+    border-top: 0.098vw solid #808080;
+  }
+
+  .thead th {
+    padding: 0.488vw;
+    font-size: 1.953vw;
+  }
+
+  .table td {
+    padding: 0.977vw;
+    font-size: 1.658vw;
+  }
+
+  .detail,
+  .order-detail {
+    width: 68.359vw;
+    margin-top: 4.883vw;
+  }
+
+  .btn-detail,
+  .btn-pick {
+    padding: 0.977vw;
+    border: 0.098vw solid #808080;
+  }
+
+  .btn-back {
+    margin-top: 1.953vw;
+    padding: 0.977vw 1.953vw;
+    border: 0.098vw solid #808080;
+  }
+
+
+  .order-item-header {
+    margin: 2.930vw 0 1.953vw;
+
+  }
+
+  .order-item {
+    margin-bottom: 0.977vw;
+  }
+
+  .order-item-header li,
+  .order-item li {
+
+    width: 22.461vw;
+
+  }
+
+  .order-item-header li {
+    font-size: 2.344vw;
+  }
+
+  .order-item-footer {
+    margin-top: 2.93vw;
+  }
+
+  .order-price {
+    border-top: 0.098vw solid #000000;
+  }
+
+  .order-price span {
+    width: 22.461vw;
+    padding: 0.977vw 0;
+
+  }
+
+  .back {
+    width: 19.043vw;
+    margin-top: 2.93vw;
+
+  }
+
+  .order-notice {
+    margin-top: 0.488vw;
+    padding: 0.977vw;
+    border: 0.098vw solid #000000;
+
+  }
+
+  .order-status {
+    font-size: 1.758vw;
+
+  }
+}
+
+//For SP
+@media screen and (max-width:767.9px) {
+  .container {
+    margin: 7.813vw auto auto auto;
+    padding: 7.813vw;
+    max-width: 50.500vw;
+    border-radius: 3.125vw;
+  }
+
+  h2 {
+    font-size: 3.750vw;
+  }
+
+  .text-danger {
+    font-size: 2.513vw;
+  }
+
+  .login-form {
+    width: 80%;
+    margin: 7.813vw auto auto auto;
+  }
+
+  .login-photo {
+    margin-bottom: 3.125vw;
+  }
+
+  .logo {
+    width: 15.625vw;
+  }
+
+  .mb-20 {
+    margin-bottom: 3.125vw;
+  }
+
+  .text-box {
+    width: calc(100% - 3.906vw);
+    padding: 1.563vw;
+    border: 0.313vw solid #8fa8a9;
+    border-radius: 1.563vw;
+    font-size: 2.500vw;
+  }
+
+  .login-link {
+    margin-bottom: 3.125vw;
+  }
+
+  .submit-btn,
+  .cancel-btn {
+    width: 15.625vw;
+    padding: 1.563vw;
+    border-radius: 1.563vw;
+    font-size: 2.813vw;
+  }
+
+  .cancel-btn {
+    border: 0.156vw solid;
+  }
+
+  // Waiter Profile & change password
+  .outer-container {
+    max-width: 100%;
+  }
+
+  .profile-password {
+    font-size: 2.500vw;
+    margin-top: 1.563vw;
+    margin-left: 1.563vw;
+  }
+
+  .mb-10 {
+    margin-bottom: 1.563vw;
+  }
+
+
+  .left {
+    margin-right: 4.688vw;
+    font-size: 2.813vw;
+  }
+
+  .right {
+    margin-left: -1.094vw;
+    font-size: 2.813vw;
+  }
+
+  //Waiter Item List
+  .item-container {
+    width: 95%;
+  }
+
+  /*Section*/
+  .section {
+    width: 55.23%;
+    margin-top: 3.125vw;
+  }
+
+  .card {
+    display: inline-block;
+    width: 27%;
+    margin: 3.125vw 2.813vw 3.125vw 0px;
+  }
+
+  .card img {
+    height: 14.564vw;
+    margin-bottom: 1.563vw;
+    border: 0.313vw solid #916cd6;
+    border-radius: 1.094vw;
+  }
+
+  .card:nth-of-type(4n) {
+    margin-right: 2.823vw;
+  }
+
+  .card:nth-of-type(3n) {
+    margin-right: 0;
+  }
+
+  .cat-title {
+    margin: 3.125vw 0;
+    padding: 3.125vw;
+    font-size: 6.250vw;
+    border-bottom: 0.156vw solid #808080;
+  }
+
+  .item-detail {
+    margin-bottom: 3.125vw;
+    font-size: 2.125vw;
+  }
+
+  .item-detail li {
+    margin-bottom: 1.563vw;
+  }
+
+  .btn {
+    margin-top: 1.563vw;
+    padding: 1.563vw 0.781vw;
+    font-size: 2.6vw;
+  }
+
+  /*Aside*/
+  .aside {
+    position: sticky;
+    top: 17.188vw;
+    width: 40.23%;
+  }
+
+  .order-title {
+    margin-bottom: 3.125vw;
+    font-size: 3.688vw;
+
+  }
+
+  .table {
+    width: 90%;
+  }
+
+  .thead {
+    border-bottom: 0.156vw solid #808080;
+  }
+
+  .tfoot {
+    border-top: 0.156vw solid #808080;
+  }
+
+  .thead th {
+    padding: 0.781vw;
+    font-size: 2.125vw;
+  }
+
+  .table td {
+    padding: 1.563vw;
+    font-size: 2.063vw;
+  }
+
+  .detail,
+  .order-detail {
+    width: 100%;
+    margin-top: 7.813vw;
+  }
+
+  .btn-detail,
+  .btn-pick {
+    padding: 1.563vw;
+    border: 0.156vw solid #808080;
+  }
+
+  .btn-back {
+    margin-top: 3.125vw;
+    padding: 1.563vw 3.125vw;
+    border: 0.156vw solid #808080;
+  }
+
+
+  .order-item-header {
+    margin: 4.688vw 0 3.125vw;
+  }
+
+  .order-item {
+    margin-bottom: 1.563vw;
+  }
+
+  .order-item-header li,
+  .order-item li {
+    width: 35.938vw;
+  }
+
+  .order-item-header li {
+    font-size: 3.750vw;
+  }
+
+  .order-item-footer {
+    margin-top: 4.688vw;
+  }
+
+  .order-price {
+    border-top: 0.156vw solid #000000;
+  }
+
+  .order-price span {
+    width: 35.938vw;
+    padding: 1.563vw 0;
+  }
+
+  .back {
+    width: 30.469vw;
+    margin-top: 4.688vw;
+  }
+
+  .order-notice {
+    margin-top: 0.781vw;
+    padding: 1.563vw;
+    border: 0.156vw solid #000000;
+  }
+
+  .order-status {
+    font-size: 2.813vw;
+  }
+
 }
