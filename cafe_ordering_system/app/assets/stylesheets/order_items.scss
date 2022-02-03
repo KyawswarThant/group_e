@@ -19,7 +19,6 @@
   border-radius: 10px;
 }
 
-
 table,
 tr {
   width: 100%;
@@ -62,7 +61,7 @@ td {
 // For Ipad
 @media screen and (min-width:768px) and (max-width:1024px) {
   .main-container {
-    max-width: 100%;
+    width: 100%;
   }
 
   .inner-container {
@@ -105,7 +104,7 @@ td {
 //For SP
 @media screen and (max-width:767.9px) {
   .main-container {
-    max-width: 100%;
+    width: 100%;
   }
 
   .inner-container {

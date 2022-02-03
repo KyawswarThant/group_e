@@ -66,7 +66,6 @@ h2 {
 
 .submit-btn,
 .cancel-btn {
-  width: 100px;
   padding: 10px;
   border: 2px solid #8fa8a9;
   color: #000000;
@@ -99,7 +98,7 @@ h2 {
 }
 
 .chart-container {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -172,7 +171,7 @@ h2 {
   .container {
     margin: 4.883vw auto auto auto;
     padding: 4.883vw;
-    max-width: 39.063vw;
+    width: 39.063vw;
     border-radius: 1.953vw;
   }
 
@@ -211,7 +210,6 @@ h2 {
 
   .submit-btn,
   .cancel-btn {
-    width: 9.766vw;
     padding: 0.977vw;
     border: 0.195vw solid #8fa8a9;
     border-radius: 0.977vw;
@@ -228,7 +226,7 @@ h2 {
   }
 
   .chart-container {
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
   }
 
@@ -250,8 +248,7 @@ h2 {
 
   // chef profile & change password
   .outer-container {
-    margin: 0 auto;
-    max-width: 100%;
+    width: 100%;
   }
 
   .profile-password {
@@ -273,7 +270,6 @@ h2 {
     margin-left: -0.684vw;
     font-size: 1.758vw;
   }
-
 }
 
 //For SP
@@ -281,13 +277,12 @@ h2 {
   .container {
     margin: 7.813vw auto auto auto;
     padding: 7.813vw;
-    max-width: 50.5vw;
+    width: 50.5vw;
     border-radius: 3.125vw;
   }
 
   h2 {
     font-size: 3.750vw;
-
   }
 
   .text-danger {
@@ -325,7 +320,6 @@ h2 {
 
   .submit-btn,
   .cancel-btn {
-    width: 15.625vw;
     padding: 1.563vw;
     border: 0.313vw solid #8fa8a9;
     border-radius: 1.563vw;
@@ -336,15 +330,13 @@ h2 {
     border: 0.156vw solid;
   }
 
-
   // graph page
   .graph-container {
     max-width: 100%;
   }
 
   .chart-container {
-    width: 60%;
-
+    width: 100%;
   }
 
   .graph-ttl {
@@ -357,7 +349,6 @@ h2 {
     margin: 7.813vw auto;
   }
 
-
   .graph-content {
     margin-top: 3.125vw;
     font-size: 2.813vw;
@@ -365,7 +356,7 @@ h2 {
 
   // chef profile & change password
   .outer-container {
-    max-width: 100%;
+    width: 100%;
   }
 
   .profile-password {
@@ -387,5 +378,4 @@ h2 {
     margin-left: -1.094vw;
     font-size: 2.813vw;
   }
-
 }

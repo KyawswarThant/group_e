@@ -137,7 +137,7 @@
   .nav {
     padding: 1.953vw 2.930vw;
   }
-  
+
   .nav ul li {
     margin-right: 1.953vw;
   }
@@ -207,6 +207,10 @@
     display: block;
   }
 
+  .nav ul li {
+    margin-right: 0;
+  }
+
   .menu ul {
     display: block;
   }
@@ -234,7 +238,7 @@
     position: absolute;
     right: 4.688vw;
     z-index: 1;
-    top: 3.125vw;
+    top: 2.5vw;
     width: 3.259vw;
     height: 2.738vw;
     margin: 0 auto;
