@@ -66,7 +66,6 @@ h2 {
 
 .submit-btn,
 .cancel-btn {
-  width: 100px;
   padding: 10px;
   border: 2px solid #8fa8a9;
   color: #000000;
@@ -74,6 +73,7 @@ h2 {
   font-weight: bold;
   text-align: center;
   border-radius: 10px;
+  font-size: 16px;
 }
 
 .submit-btn:hover {
@@ -98,7 +98,7 @@ h2 {
 }
 
 .chart-container {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -164,4 +164,218 @@ h2 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 18px;
   font-style: italic;
+}
+
+//For Ipad
+@media screen and (min-width:768px) and (max-width:1024px) {
+  .container {
+    margin: 4.883vw auto auto auto;
+    padding: 4.883vw;
+    width: 39.063vw;
+    border-radius: 1.953vw;
+  }
+
+  h2 {
+    font-size: 2.344vw;
+  }
+
+  .login-form {
+    width: 80%;
+    margin: 4.883vw auto auto auto;
+  }
+
+  .login-photo {
+    margin-bottom: 1.953vw;
+  }
+
+  .logo {
+    width: 9.766vw;
+  }
+
+  .mb-20 {
+    margin-bottom: 1.953vw;
+  }
+
+  .text-box {
+    width: calc(100% - 2.441vw);
+    padding: 0.977vw;
+    border: 0.195vw solid #8fa8a9;
+    font-size: 1.563vw;
+    border-radius: 0.977vw;
+  }
+
+  .login-link {
+    margin-bottom: 1.953vw;
+  }
+
+  .submit-btn,
+  .cancel-btn {
+    padding: 0.977vw;
+    border: 0.195vw solid #8fa8a9;
+    border-radius: 0.977vw;
+    font-size: 1.563vw;
+  }
+
+  .cancel-btn {
+    border: 0.098vw solid;
+  }
+
+  // graph page
+  .graph-container {
+    max-width: 100%;
+  }
+
+  .chart-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .graph-ttl {
+    margin-top: 1.953vw;
+    font-size: 2.344vw;
+  }
+
+  .graph-form {
+    width: 60%;
+    margin: 2.344vw auto;
+  }
+
+
+  .graph-content {
+    margin-top: 1.953vw;
+    font-size: 1.758vw;
+  }
+
+  // chef profile & change password
+  .outer-container {
+    width: 100%;
+  }
+
+  .profile-password {
+    margin-top: 0.977vw;
+    margin-left: 0.977vw;
+    font-size: 1.563vw;
+  }
+
+  .mb-10 {
+    margin-bottom: 0.977vw;
+  }
+
+  .left {
+    margin-right: 2.930vw;
+    font-size: 1.758vw;
+  }
+
+  .right {
+    margin-left: -0.684vw;
+    font-size: 1.758vw;
+  }
+}
+
+//For SP
+@media screen and (max-width:767.9px) {
+  .container {
+    margin: 7.813vw auto auto auto;
+    padding: 7.813vw;
+    width: 50.5vw;
+    border-radius: 3.125vw;
+  }
+
+  h2 {
+    font-size: 3.750vw;
+  }
+
+  .text-danger {
+    font-size: 2.513vw;
+  }
+
+  .login-form {
+    width: 80%;
+    margin: 7.813vw auto auto auto;
+  }
+
+  .login-photo {
+    margin-bottom: 3.125vw;
+  }
+
+  .logo {
+    width: 15.625vw;
+  }
+
+  .mb-20 {
+    margin-bottom: 3.125vw;
+  }
+
+  .text-box {
+    width: calc(100% - 3.906vw);
+    padding: 1.563vw;
+    border: 0.313vw solid #8fa8a9;
+    font-size: 2.5vw;
+    border-radius: 1.563vw;
+  }
+
+  .login-link {
+    margin-bottom: 3.125vw;
+  }
+
+  .submit-btn,
+  .cancel-btn {
+    padding: 1.563vw;
+    border: 0.313vw solid #8fa8a9;
+    border-radius: 1.563vw;
+    font-size: 2.813vw;
+  }
+
+  .cancel-btn {
+    border: 0.156vw solid;
+  }
+
+  // graph page
+  .graph-container {
+    max-width: 100%;
+  }
+
+  .chart-container {
+    width: 100%;
+  }
+
+  .graph-ttl {
+    margin-top: 3.125vw;
+    font-size: 3.750vw;
+  }
+
+  .graph-form {
+    width: 60%;
+    margin: 7.813vw auto;
+  }
+
+  .graph-content {
+    margin-top: 3.125vw;
+    font-size: 2.813vw;
+  }
+
+  // chef profile & change password
+  .outer-container {
+    width: 100%;
+  }
+
+  .profile-password {
+    margin-top: 1.563vw;
+    margin-left: 1.563vw;
+    font-size: 2.500vw;
+  }
+
+  .mb-10 {
+    margin-bottom: 1.563vw;
+  }
+
+  .left {
+    margin-right: 4.688vw;
+    font-size: 2.813vw;
+  }
+
+  .right {
+    margin-left: -1.094vw;
+    font-size: 2.813vw;
+  }
 }

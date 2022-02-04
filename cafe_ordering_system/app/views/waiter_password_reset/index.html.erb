@@ -5,7 +5,8 @@
       <%= form.text_field :email, placeholder: "Enter email", class: "email", required: true %>
     </div>
     <div class="submit">
-      <%= form.submit "Search", class: "btn" %>
-    </div>
+    <%= form.submit "Search", class: "submit-btn" %>
+    <%= link_to "Go Back", root_path, class: "cancel-btn" %>
+  </div>
   <% end %>
 </div>
