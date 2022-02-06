@@ -24,7 +24,7 @@ class ChefsController < ApplicationController
     if @is_chef_update
       redirect_to chef_path(id: session[:chef_id])
     else
-      render :edit_profile
+      render :edit
     end
   end
 

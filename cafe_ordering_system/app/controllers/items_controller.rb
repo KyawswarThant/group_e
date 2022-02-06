@@ -36,8 +36,11 @@ class ItemsController < ApplicationController
 
   def update
     @item = ItemService.get_item_by_id(params[:id])
-    @item.update(item_params)
-    redirect_to(item_path(@item))
+    if @item.update(item_params)
+      redirect_to(item_path(@item))
+    else
+      render :edit
+    end
   end
 
   def destroy

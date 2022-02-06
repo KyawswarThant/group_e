@@ -1,4 +1,6 @@
 class ChefLoginController < ApplicationController
+  before_action :is_chef, only: [:index]
+
   def sign_in
     @chef = ChefService.find_by_email(params[:email])
 

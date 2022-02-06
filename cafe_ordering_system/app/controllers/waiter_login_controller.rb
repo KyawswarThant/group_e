@@ -1,4 +1,6 @@
 class WaiterLoginController < ApplicationController
+  before_action :is_waiter, only: [:index]
+
   def sign_in
     @waiter = WaiterService.find_by_email(params[:email])
 

@@ -37,7 +37,7 @@ class WaitersController < ApplicationController
     if @is_waiter_update
       redirect_to waiter_path(id: session[:waiter_id])
     else
-      render :waiter_edit_profile
+      render :edit
     end
   end
 
