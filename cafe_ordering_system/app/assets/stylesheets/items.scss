@@ -136,7 +136,7 @@ h3 {
 .item-detail {
   line-height: 35px;
   color: #4333cf;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 18px;
 }
 
@@ -255,7 +255,7 @@ h3 {
 
   .create-item a {
     margin: 0.488vw;
-    padding: 0.977vw 0.977vw;
+    padding: 0.6vw;
     border: 0.195vw solid #000000;
     font-size: 1.758vw;
     border-radius: 0.781vw;
@@ -277,8 +277,8 @@ h3 {
 
   .link-btn a,
   .delete-btn a {
-    padding: 0.488vw 2.906vw;
-    font-size: 2.813vw;
+    padding: 0.188vw 1.906vw;
+    font-size: 2vw;
   }
 
   .img-field-tag::file-selector-button {
@@ -336,7 +336,7 @@ h3 {
   }
 
   .btn-submit {
-    padding: 1.25vw 3.125vw;
+    padding: 0.75vw 3.75vw;
     border: 0.313vw solid #8fa8a9;
     border-radius: 0.781vw;
   }
@@ -382,7 +382,7 @@ h3 {
 
   .create-item a {
     margin: 0.781vw;
-    padding: 1.563vw;
+    padding: 1vw;
     border: 0.313vw solid #000000;
     font-size: 2.813vw;
     border-radius: 1.25vw;
@@ -404,7 +404,8 @@ h3 {
 
   .link-btn a,
   .delete-btn a {
-    padding: 0.781vw 3.55vw;
+    padding: 0.5vw 2vw;
+    font-size: 2.813vw;
   }
 
   .img-field-tag::file-selector-button {

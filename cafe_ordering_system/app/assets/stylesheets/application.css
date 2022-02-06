@@ -108,19 +108,13 @@
 
 /* item */
 .hdr {
-  padding-top: 20px;
-  padding-bottom: 15px;
+  padding: 15px 0;
   background-color: #d7dfdf;
   color: #000000;
   font-size: 26px;
   font-weight: bold;
   text-align: center;
   font-style: italic;
-}
-
-.fa-plus-square,
-.fa-minus-square {
-  font-size: 20px;
 }
 
 /* For Ipad  */
@@ -144,6 +138,7 @@
 
   .nav ul li a {
     padding: 0.977vw;
+    font-size: 1.707vw;
   }
 
   .ttl-logo {
@@ -152,14 +147,8 @@
 
   /* item */
   .hdr {
-    padding-top: 1.953vw;
-    padding-bottom: 1.465vw;
+    padding: 1.15vw 0;
     font-size: 2.539vw;
-  }
-
-  .fa-plus-square,
-  .fa-minus-square {
-    font-size: 1.953vw;
   }
 }
 
@@ -190,7 +179,7 @@
   }
 
   .is-active {
-    color: darkviolet;
+    color: #00d399;
   }
 
   .menu ul li a {
@@ -198,7 +187,7 @@
     padding: 3.344vw 0;
     width: 100%;
     margin-top: 0;
-    font-size: 2.500vw;
+    font-size: 2.800vw;
     margin-right: 0;
     float: left;
   }
@@ -280,13 +269,8 @@
 
   /* item */
   .hdr {
-    padding-top: 3.125vw;
-    padding-bottom: 2.344vw;
+    padding: 1vw 0;
     font-size: 4.063vw;
   }
 
-  .fa-plus-square,
-  .fa-minus-square {
-    font-size: 1.05vw;
-  }
 }

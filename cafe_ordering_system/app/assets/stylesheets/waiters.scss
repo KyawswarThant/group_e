@@ -4,10 +4,10 @@
 
 
 .container {
-  margin: 50px auto auto auto;
+  margin: 50px auto;
   padding: 50px;
   border: solid #8fa8a9;
-  max-width: 400px;
+  max-width: 500px;
   border-radius: 20px;
 }
 
@@ -134,6 +134,7 @@ h2 {
 .item-container {
   max-width: 1300px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 /*Section*/
@@ -177,6 +178,11 @@ h2 {
   margin-bottom: 10px;
 }
 
+.icon,
+.card-body ul li span {
+  font-size: 22px;
+}
+
 .btn {
   display: block;
   margin-top: 10px;
@@ -191,7 +197,7 @@ h2 {
 /*Aside*/
 .aside {
   position: sticky;
-  top: 118px;
+  top: 113px;
   float: right;
   width: 40%;
 }
@@ -325,7 +331,7 @@ h2 {
   .container {
     margin: 4.883vw auto auto auto;
     padding: 4.883vw;
-    width: 39.063vw;
+    width: 50vw;
     border-radius: 1.953vw;
   }
 
@@ -405,7 +411,7 @@ h2 {
   //Waiter Item List
   .item-container {
     width: 95%;
-
+    padding: 0;
   }
 
   /*Section*/
@@ -443,15 +449,20 @@ h2 {
     margin-bottom: 0.977vw;
   }
 
+  .icon,
+  .card-body ul li span {
+    font-size: 1.829vw;
+  }
+
   .btn {
     margin-top: 0.977vw;
-    padding: 0.977vw 0.488vw;
+    padding: 0.75vw 0.488vw;
     font-size: 1.563vw;
   }
 
   /*Aside*/
   .aside {
-    top: 10.742vw;
+    top: 10.8vw;
     width: 33.3%;
   }
 
@@ -554,8 +565,8 @@ h2 {
 @media screen and (max-width:767.9px) {
   .container {
     margin: 7.813vw auto auto auto;
-    padding: 7.813vw;
-    width: 50.500vw;
+    padding: 4.813vw;
+    width: 60vw;
     border-radius: 3.125vw;
   }
 
@@ -638,6 +649,7 @@ h2 {
   //Waiter Item List
   .item-container {
     width: 95%;
+    padding: 0;
   }
 
   /*Section*/
@@ -683,16 +695,21 @@ h2 {
     margin-bottom: 1.563vw;
   }
 
+  .icon,
+  .card-body ul li span {
+    font-size: 2.670vw;
+  }
+
   .btn {
     margin-top: 1.563vw;
-    padding: 1.563vw 0.781vw;
+    padding: 1vw 0.781vw;
     font-size: 2.6vw;
   }
 
   /*Aside*/
   .aside {
     position: sticky;
-    top: 17.188vw;
+    top: 11.8vw;
     width: 50%;
   }
 
