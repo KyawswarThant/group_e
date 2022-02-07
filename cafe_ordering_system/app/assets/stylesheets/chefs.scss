@@ -161,7 +161,7 @@ h2 {
 
 .right {
   width: 50%;
-  word-break: break-word;
+  word-break: break-all;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 18px;
   font-style: italic;
@@ -265,12 +265,12 @@ h2 {
   .column {
     margin-right: 1.953vw;
   }
-  
+
   .left {
     font-size: 1.758vw;
     margin-right: 3.418vw;
   }
-  
+
   .right {
     font-size: 1.758vw;
   }
@@ -327,7 +327,7 @@ h2 {
     padding: 1.563vw;
     border: 0.313vw solid #8fa8a9;
     border-radius: 1.563vw;
-    font-size: 2.813vw;
+    font-size: 2.513vw;
   }
 
   .cancel-btn {
@@ -372,16 +372,16 @@ h2 {
   .mb-10 {
     margin-bottom: 1.563vw;
   }
-  
+
   .column {
     margin-right: 3.125vw;
   }
-  
+
   .left {
     font-size: 2.513vw;
     margin-right: 5.469vw;
   }
-  
+
   .right {
     font-size: 2.513vw;
   }

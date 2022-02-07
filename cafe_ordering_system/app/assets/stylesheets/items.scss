@@ -1,6 +1,6 @@
 .main-container {
   margin: 0 auto;
-  max-width: 1300px;
+  max-width: 1400px;
 }
 
 .container {
@@ -79,6 +79,7 @@ h3 {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
+  word-break: break-all;
 }
 
 .line {
@@ -87,14 +88,20 @@ h3 {
   background-color: #000000;
 }
 
-.items-div {
-  float: left;
-  width: 17%;
-  text-align: center;
-  margin: 0 30px 20px 0;
+.item-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.items-div:nth-of-type(5n) {
+.items-div {
+  float: left;
+  width: 18%;
+  text-align: center;
+  margin: 0 24px 20px 0;
+}
+
+.items-div:nth-child(5n) {
   margin-right: 0;
 }
 
@@ -142,7 +149,7 @@ h3 {
   color: #4333cf;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 18px;
-  word-break: break-word;
+  word-break: break-all;
 }
 
 .items-div p {
@@ -184,6 +191,7 @@ h3 {
 
 //For Ipad
 @media screen and (min-width:768px) and (max-width:1024px) {
+
   .main-container {
     width: 100%;
   }
@@ -256,6 +264,11 @@ h3 {
     border-radius: 0.684vw;
   }
 
+  .item-container {
+    width: 95%;
+    padding: 0;
+  }
+
   .items-div {
     width: 17%;
     margin: 0 3.125vw 1.953vw 0;
@@ -280,7 +293,6 @@ h3 {
   }
 
   .item-detail {
-    line-height: 3.418vw;
     font-size: 1.758vw;
   }
 
@@ -317,6 +329,7 @@ h3 {
 
 //For SP
 @media screen and (max-width:767.9px) {
+
   .main-container {
     width: 100%;
   }
@@ -341,7 +354,6 @@ h3 {
     border: 0.313vw solid #8fa8a9;
     font-size: 2.5vw;
     border-radius: 1.563vw;
-
   }
 
   .name,
@@ -361,6 +373,11 @@ h3 {
     padding: 0.75vw 3.75vw;
     border: 0.313vw solid #8fa8a9;
     border-radius: 0.781vw;
+    font-size: 3vw;
+  }
+
+  .back-button {
+    font-size: 3vw;
   }
 
   .img-show {
@@ -385,15 +402,23 @@ h3 {
     border: 0.156vw solid #000000;
   }
 
+  .item-container {
+    width: 95%;
+    padding: 0;
+  }
+
   .items-div {
     width: 21%;
-    margin: 0 5vw 3.125vw 0;
+    margin: 0 5vw 2.825vw 0;
+  }
+
+  .items-div:nth-of-type(5n) {
+    margin-right: 5vw;
   }
 
   .items-div:nth-of-type(4n) {
     margin-right: 0;
   }
-
 
   .items-div img {
     width: 100%;
@@ -417,7 +442,6 @@ h3 {
   }
 
   .item-detail {
-    line-height: 5.469vw;
     font-size: 2.813vw;
   }
 

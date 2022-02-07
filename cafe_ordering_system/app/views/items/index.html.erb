@@ -5,7 +5,7 @@
   <% if @coffee.length > 0 %>
     <div>
       <h2 class="hdr"><%= @coffee[0].category.capitalize %></h2>
-      <div class="clearfix">
+      <div class="item-container clearfix">
         <% @coffee.each do |item| %>
           <div class="items-div">
            <p><%= image_tag item.image.url(:original) %></p>
@@ -24,7 +24,7 @@
   <% if @icecream.length > 0 %>
     <div>
       <h2 class="hdr"><%= @icecream[0].category.capitalize %></h2>
-      <div class="clearfix">
+      <div class="item-container clearfix">
         <% @icecream.each do |item| %>
           <div class="items-div">
             <p><%= image_tag item.image.url(:original) %></p>
@@ -43,7 +43,7 @@
   <% if @cake.length > 0 %>
     <div>
       <h2 class="hdr"><%= @cake[0].category.capitalize %></h2>
-      <div class="clearfix">
+      <div class="item-container clearfix">
         <% @cake.each do |item| %>
           <div class="items-div">
             <p><%= image_tag item.image.url(:original) %></p>
@@ -62,7 +62,7 @@
   <% if @tea.length > 0 %>
     <div>
       <h2 class="hdr"><%= @tea[0].category.capitalize %></h2>
-      <div class="clearfix">
+      <div class="item-container clearfix">
         <% @tea.each do |item| %>
           <div class="items-div">
             <p><%= image_tag item.image.url(:original) %></p>
