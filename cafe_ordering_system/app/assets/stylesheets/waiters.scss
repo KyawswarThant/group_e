@@ -148,6 +148,7 @@ h2 {
   display: inline-block;
   width: 22%;
   margin: 20px 18px 20px 0px;
+
 }
 
 .card img {
@@ -155,7 +156,8 @@ h2 {
   border: 2px solid #916cd6;
   border-radius: 7px;
 }
-.card:nth-of-type(4n){
+
+.card:nth-of-type(4n) {
   margin-right: 0;
 }
 
@@ -176,6 +178,7 @@ h2 {
 
 .item-detail li {
   margin-bottom: 10px;
+  word-break: break-word;
 }
 
 .icon,
@@ -398,12 +401,12 @@ h2 {
   .column {
     margin-right: 1.953vw;
   }
-  
+
   .left {
     font-size: 1.758vw;
     margin-right: 3.418vw;
   }
-  
+
   .right {
     font-size: 1.758vw;
   }
@@ -633,15 +636,16 @@ h2 {
   .mb-10 {
     margin-bottom: 1.563vw;
   }
+
   .column {
     margin-right: 3.125vw;
   }
-  
+
   .left {
     font-size: 2.513vw;
     margin-right: 5.469vw;
   }
-  
+
   .right {
     font-size: 2.513vw;
   }
