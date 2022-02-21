@@ -29,8 +29,12 @@
 /config/master.key
 
 /public/packs
-/public/packs-test
+/public/packs-
+/public/system
 /node_modules
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# ignore database.yml
+/config/database.yml
