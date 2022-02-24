@@ -1,10 +1,8 @@
 <div class="container">
-
   <div class="login-photo">
     <%= image_tag ("login_icons/img_chef_login.jpg"), class: "logo", alt: "chef login icon" %>
   </div>
   <h2>Chef Login</h2>
-
   <%= form_with url: chef_sign_in_path, class: "login-form" do |form| %>
     <div class="mb-20">
       <%= form.text_field :email, class: "text-box", placeholder: "Enter Email", required: true %>
@@ -21,7 +19,5 @@
 
     <p class="create-acc">Do not have any account? <%= link_to "Sign Up Account", new_chef_path, class: "links" %></p>
     <div class="submit"><%= form.submit "Sign In", class: "submit-btn" %></div>
-
   <% end %>
-
 </div>

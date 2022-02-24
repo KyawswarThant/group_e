@@ -5,30 +5,25 @@
       <%= image_tag ("login_icons/img_waiter_login.png"), class: "logo", alt: "sign up logo" %>
     </div>
     <div class="column mb-20">
-    <p class="left">Name:</p>
-    <span class="right"><%= @waiter.name %></span>
+      <p class="left">Name:</p>
+      <span class="right"><%= @waiter.name %></span>
     </div>
-
     <div class="column mb-20">
-    <p class="left">Email:</p>
-    <span class="right"><%= @waiter.email %></span>
+      <p class="left">Email:</p>
+      <span class="right"><%= @waiter.email %></span>
     </div>
-
     <div class="column mb-20">
-    <p class="left">Phone:</p>
-    <span class="right"><%= @waiter.phone %></span>
+      <p class="left">Phone:</p>
+      <span class="right"><%= @waiter.phone %></span>
     </div>
-  
     <div class="column mb-20">
-    <p class="left">Address:</p>
-    <span class="right"><%= @waiter.address %></span>
+      <p class="left">Address:</p>
+      <span class="right"><%= @waiter.address %></span>
     </div>
-
     <div class="column mb-20">
-    <p class="left">Birthday:</p>
-    <span class="right"><%= @waiter.birthday %></span>
+      <p class="left">Birthday:</p>
+      <span class="right"><%= @waiter.birthday %></span>
     </div>
-   
     <div class="profile-password">
       <%= link_to "Edit Profile", edit_waiter_path(id: session[:waiter_id]) %>
       <%= link_to "Change Password", waiter_password_path %>
